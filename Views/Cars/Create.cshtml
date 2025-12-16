@@ -1,0 +1,49 @@
+﻿@model ClassicCars.Models.Car
+
+<h1>Add New Car</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Brand"></label>
+        <input asp-for="Brand" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Model"></label>
+        <input asp-for="Model" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Year"></label>
+        <input asp-for="Year" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EngineType"></label>
+        <input asp-for="EngineType" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Condition"></label>
+        <input asp-for="Condition" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Horsepower"></label>
+        <input asp-for="Horsepower" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserId"></label>
+        <textarea asp-for="UserId" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Car.cs">
+    <Files>
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="15" Column="1" />
+      <File FileName="Controllers/CarsController.cs" Line="15" Column="1" />
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/Car.cs" Line="33" Column="56" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="18" Column="10" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Views/Cars/Create.cshtml" />
+      <File FileName="Views/Cars/Delete.cshtml" />
+      <File FileName="Views/Cars/Details.cshtml" />
+      <File FileName="Views/Cars/Edit.cshtml" />
+      <File FileName="Views/Cars/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="Migrations/20251214210723_InitialCreate.cs" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Views/_ViewImports.cshtml" />
+      <File FileName="Views/_ViewStart.cshtml" />
+      <File FileName="Models/User.cs" Line="13" Column="25" />
+      <File FileName="Models/Register.cs" Line="8" Column="10" />
+      <File FileName="Models/Login.cs" Line="9" Column="11" />
+      <File FileName="EntityValidations.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ClassicCars" expanded="True">
+            <Node name="ClassicCars" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Car.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Cars" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ClassicCars PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

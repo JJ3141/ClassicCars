@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ClassicCars.Models.Car>
+
+@{
+    ViewData["Title"] = "Classic Cars";
+}
+
+<h1>Classic Cars</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New Car</a>
+</p>
+
+@* @if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning">
+        WTF
+    </div>
+} *@
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Engine Type</th>
+                <th>Condition</th>
+                <th>HorsePower</th>
+                <th>UserId</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@car.Brand</td>
+                    <td>@car.Model</td>
+                    <td>@car.Year</td>
+                    <td>@car.EngineType</td>
+                    <td>@car.Condition</td>
+                    <td>@car.Horsepower</td>
+                    <th>UserId</th>
+                    <td>@car.Description</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(car.ImageUrl))
+                        {
+                            <img src="@car.ImageUrl" alt="Car Image" width="100" />
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@car.Id">Details</a>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@car.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@car.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
