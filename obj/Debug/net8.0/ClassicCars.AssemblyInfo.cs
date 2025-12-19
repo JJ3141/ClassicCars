@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassicCars")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04374ed0ae69f6854c3b19f65f5622b0afc3fe89")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassicCars")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassicCars")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

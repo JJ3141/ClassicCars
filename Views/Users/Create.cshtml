@@ -1,0 +1,20 @@
+﻿@model User
+
+<h2>Create User</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+<partial name="_ValidationScriptsPartial" />

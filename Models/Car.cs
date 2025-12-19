@@ -23,7 +23,7 @@ namespace ClassicCars.Models
 
         public string Condition { get; set; } 
 
-        public decimal? Price { get; set; }
+        public decimal Price { get; set; }
 
         [Required]
         public string ImageUrl { get; set; } = null!;
@@ -31,6 +31,6 @@ namespace ClassicCars.Models
         public string Description { get; set; }
 
         public int? UserId { get; set; }
-        public virtual User User { get; set; } = null!;
+        public virtual User? User { get; set; }
     }
 }

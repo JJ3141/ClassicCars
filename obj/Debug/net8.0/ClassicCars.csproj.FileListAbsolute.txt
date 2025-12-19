@@ -510,3 +510,4 @@ C:/Users/Administrator/Desktop/ClassicCars/ClassicCars/bin/Debug/net8.0/Microsof
 /Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/ClassicCars.pdb
 /Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/ClassicCars.genruntimeconfig.cache
 /Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/ref/ClassicCars.dll
+/Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/ClassicCars.sourcelink.json

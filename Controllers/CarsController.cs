@@ -1,6 +1,7 @@
 ﻿using ClassicCars.Data;
 using ClassicCars.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClassicCars.Controllers
 {
@@ -54,6 +55,7 @@ namespace ClassicCars.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Car car)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Cars.Add(car);
