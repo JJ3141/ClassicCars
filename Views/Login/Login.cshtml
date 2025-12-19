@@ -1,0 +1,50 @@
+﻿@model Login
+
+@*@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}*@
+
+<link rel="stylesheet" href="~/css/log-in.css" />
+@*//Add icon*@
+<div class="container">
+    <div class="left">
+        <div class="avatar">
+            <span class="icon"></span>
+        </div>
+        <h1>My Profile</h1>
+        <p>Classic cars member</p>
+    </div>
+    <div class="right">
+        <h2>Sign In</h2>
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error">
+                @Html.ValidationSummary()
+            </div>
+        }
+        <form asp-action="Login"method="post">
+            <div class="input-group">
+                <input asp-for="Username"
+                       type="text"
+                       placeholder="Username"
+                       class="form-control"
+                       required />
+            </div>
+            <div class="input-group">
+                <input asp-for="Password"
+                       type="password"
+                       placeholder="Password"
+                       class="form-control"
+                       required />
+            </div>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <p class="login">
+            New here?
+            <a asp-action="Register" asp-controller="Register">Create account</a>
+        </p>
+    </div>
+</div>

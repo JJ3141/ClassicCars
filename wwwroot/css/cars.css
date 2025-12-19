@@ -1,0 +1,38 @@
+﻿.collections {
+    padding: 40px;
+    text-align: right;
+}
+
+    .collections h2 {
+        font-size: 45px;
+        margin-bottom: 1em;
+    }
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap:wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    width: 360px;
+    height: 460px;
+    border-radius: 15px;
+}
+
+.card-img {
+    background: #F3ECD7;
+    padding: 20px;
+    padding-right: 30px;
+    margin-bottom: 2px;
+    width: 320px;
+    height: 310px;
+    border-radius: 15px;
+}
+
+.desc {
+    font-size: 12px;
+}

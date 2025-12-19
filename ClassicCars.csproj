@@ -26,10 +26,18 @@
 
   <ItemGroup>
     <None Remove="Migrations\" />
-    <None Remove="Views\Users\" />
+    <None Remove="Views\Login\" />
+    <None Remove="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Views\Users\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Register\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\cars.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\cars.css" />
   </ItemGroup>
 </Project>
