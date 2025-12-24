@@ -1,0 +1,145 @@
+﻿@model ClassicCars.Models.User
+
+    <link rel="stylesheet" href="~/css/profile.css" />
+
+    <div class="container">
+
+        <aside class="profile">
+            <div class="avatar"><span>👤</span></div>
+            <h2>@Model.FirstName @Model.LastName</h2>
+            <p class="member">Classic cars member</p>
+            <hr>
+            <a asp-controller="Register"
+               asp-action="Edit"
+               class="edit-btn">
+                Edit Profile
+            </a>
+        </aside>
+
+        <main class="content">
+            <header class="nav-bar">
+                <div class="logo">R</div>
+
+                <nav>
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Collection" asp-action="Index">Collections</a>
+                    <a asp-controller="Gallery" asp-action="Gallery">Gallery</a>
+
+                    @if (Context.Session.GetInt32("UserId") != null)
+                    {
+                        <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;">
+                            <button type="submit" class="logout-btn">Log Out</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-controller="Register" asp-action="Register" method="get" style="display:inline;">
+                            <button type="submit" class="signin-btn">Sign In</button>
+                        </form>
+
+                        <form asp-controller="Login" asp-action="Login" method="get" style="display:inline;">
+                            <button type="submit" class="login-btn">Log In</button>
+                        </form>
+                    }
+                </nav>
+            </header>
+
+
+            <section class="cars">
+                <div class="cars-header">
+                    <h2>My cars</h2>
+                    <button type="button" class="add-car" onclick="toggleAddCarForm()">Add new car</button>
+                </div>
+
+                <div id="add-car-form" style="display:none; margin-top:15px;">
+                    <form asp-controller="Profile" asp-action="Create" method="post">
+                        <div>
+                            <label>Brand</label>
+                            <input type="text" name="Brand" required />
+                        </div>
+                        <div>
+                            <label>Model</label>
+                            <input type="text" name="Model" required />
+                        </div>
+                        <div>
+                            <label>Year</label>
+                            <input type="number" name="Year" min="1900" max="2100" required />
+                        </div>
+                        <div>
+                            <label>Engine Type</label>
+                            <input type="text" name="EngineType" />
+                        </div>
+                        <div>
+                            <label>Horsepower</label>
+                            <input type="number" name="Horsepower" />
+                        </div>
+                        <div>
+                            <label>Condition</label>
+                            <input type="text" name="Condition" />
+                        </div>
+                        <div>
+                            <label>Price</label>
+                            <input type="number" step="0.01" name="Price" required />
+                        </div>
+                        <div>
+                            <label>Transmission</label>
+                            <input type="text" name="Transmission" />
+                        </div>
+                        <div>
+                            <label>Image URL</label>
+                            <input type="text" name="ImageUrl" required />
+                        </div>
+                        <div>
+                            <label>Description</label>
+                            <textarea name="Description"></textarea>
+                        </div>
+                        <button type="submit">Add</button>
+                        <button type="button" onclick="toggleAddCarForm()">Cancel</button>
+                    </form>
+                </div>
+
+
+                <div class="car-list">
+                    @for (int i = 0; i < Model.Cars.Count; i++)
+                    {
+                        var car = Model.Cars.ElementAt(i);
+                        var extraClass = i >= 3 ? "extra" : "";
+                        var displayStyle = i >= 3 ? "display:none;" : "";
+                        <div class="car-card @extraClass" style="@displayStyle">
+                           <div class="car-image" style="background-image:url('@car.ImageUrl')"></div>
+                            <p><strong>@car.Model</strong> <span class="price">@car.Price</span></p>
+                            <p class="desc">@car.Description</p>
+                        </div>
+                    }
+                </div>
+
+                <button class="more-btn" onclick="toggleCars()">More</button>
+            </section>
+
+            <section class="account">
+                <h3>Account Details</h3>
+                <div class="detail"><span class="label">Username</span><span class="value">@Model.Username</span></div>
+                <div class="detail"><span class="label">Email</span><span class="value">@Model.Email</span></div>
+                <div class="detail"><span class="label">First Name</span><span class="value">@Model.FirstName</span></div>
+                <div class="detail"><span class="label">Last Name</span><span class="value">@Model.LastName</span></div>
+            </section>
+        </main>
+    </div>
+
+  <script>
+let expanded = false;
+
+function toggleCars() {
+    const extraCars = document.querySelectorAll('.car-card.extra');
+    const btn = document.querySelector('.more-btn');
+    extraCars.forEach(car => car.style.display = expanded ? 'none' : 'block');
+    btn.textContent = expanded ? 'More' : 'Less';
+    expanded = !expanded;
+}
+
+function toggleAddCarForm() {
+    const form = document.getElementById('add-car-form');
+    form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+}
+</script>
+

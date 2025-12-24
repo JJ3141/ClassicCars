@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ClassicCars.Models.Car>
+
+<link rel="stylesheet" href="~/css/collection-card.css"/>
+
+<header class="nav-bar">
+    <div class="logo">R</div>
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Cars" asp-action="Index">Collections</a>
+        <a asp-controller="Gallery" asp-action="Gallery">Gallery</a>
+
+        @if (Context.Session.GetInt32("UserId") != null)
+        {
+            <form asp-controller="Profile" asp-action="Index" method="get" style="display:inline;">
+                <button type="submit" class="profile-btn">Profile</button>
+            </form>
+            <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;">
+                <button type="submit" class="logout-btn">Log Out</button>
+            </form>
+        }
+        else
+        {
+            <form asp-controller="Register" asp-action="Register" method="get" style="display:inline;">
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+
+            <form asp-controller="Login" asp-action="Login" method="get" style="display:inline;">
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+        }
+    </nav>
+</header>
+
+<div class="page">
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Търсене..." />
+        <div class="buttons">
+            <button type="button" onclick="sortByPrice()">Показване по цена</button>
+        </div>
+    </div>
+
+    <div class="cards" id="cardsContainer">
+        @foreach (var car in Model)
+        {
+            <div class="card"
+                 data-model="@($"{car.Brand} {car.Model}")"
+                 data-price="@car.Price">
+
+                <div class="card-img">
+                    <img src="@car.ImageUrl" alt="Car" />
+                </div>
+
+                <p class="model">@car.Brand @car.Model</p>
+                <p class="price">@car.Price лв.</p>
+                <p class="desc">@car.Description</p>
+            </div>
+        }
+    </div>
+</div>
+
+<section class="footer-hero">
+    <h3>Discover the Golden Age of the Automobiles</h3>
+</section>
+
+@section Scripts {
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("searchInput");
+            const container = document.getElementById("cardsContainer");
+
+            searchInput.addEventListener("input", () => {
+                const value = searchInput.value.toLowerCase();
+                const cards = container.querySelectorAll(".card");
+
+                cards.forEach(card => {
+                    const model = card.dataset.model.toLowerCase();
+                    card.style.display = model.includes(value) ? "flex" : "none";
+                });
+            });
+        });
+
+        let priceAsc = true;
+
+        function sortByPrice() {
+            const container = document.getElementById("cardsContainer");
+            const cards = Array.from(container.querySelectorAll(".card"));
+
+            cards.sort((a, b) => {
+                const priceA = Number(a.dataset.price);
+                const priceB = Number(b.dataset.price);
+                return priceAsc ? priceA - priceB : priceB - priceA;
+            });
+
+            priceAsc = !priceAsc;
+            cards.forEach(card => container.appendChild(card));
+        }</script>
+}

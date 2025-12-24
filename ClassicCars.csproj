@@ -28,16 +28,22 @@
     <None Remove="Migrations\" />
     <None Remove="Views\Login\" />
     <None Remove="Views\Register\" />
+    <None Remove="Views\Profile\" />
+    <None Remove="Views\Collection\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\Register\" />
+    <Folder Include="wwwroot\gallery\" />
+    <Folder Include="Views\Profile\" />
+    <Folder Include="Views\Collection\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\cars.css" />
+    <Content Remove="wwwroot\gallery\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\css\cars.css" />
+    <None Include="wwwroot\css\collection-card.css" />
   </ItemGroup>
 </Project>

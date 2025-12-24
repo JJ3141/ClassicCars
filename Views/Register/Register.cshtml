@@ -1,6 +1,44 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ClassicCars.Models.User
+
+
 @{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
 }
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="container">
+    <div class="left">
+        <div class="avatar">
+            <span class="icon">👤</span>
+        </div>
+        <h1>My Profile</h1>
+        <p>Classic cars member</p>
+    </div>
+
+    <div class="right">
+        <h2 class="title">Register</h2>
+
+        <form asp-action="@(Model?.Id > 0 ? "Save" : "Register")" asp-controller="Register" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <input asp-for="Username" placeholder="Username" class="form-input" />
+            <input asp-for="Email" placeholder="Email" class="form-input" />
+            <input asp-for="FirstName" placeholder="First Name" class="form-input" />
+            <input asp-for="LastName" placeholder="Last Name" class="form-input" />
+
+            @if (Model?.Id == 0)
+            {
+                <input asp-for="Password" type="password" placeholder="Password" class="form-input" />
+            }
+
+
+            <button type="submit" class="submit-btn">
+                @(Model?.Id > 0 ? "Save changes" : "Register")
+            </button>
+        </form>
+
+    </div>
+</div>
 

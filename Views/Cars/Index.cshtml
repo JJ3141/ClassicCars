@@ -1,23 +1,6 @@
-﻿@model List<Car>
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
 
-
-    <link rel="stylesheet" href="~/css/cars.css" />
-    <section class="collections">
-        <h2>Collections</h2>
-
-        <div class="cards">
-
-            @foreach (var car in Model)
-            {
-                <div class="card">
-                    <div class="card-img">
-                        <img src="@car.ImageUrl" alt="Car">
-                    </div>
-
-                    <p class="model">@car.Brand @car.Model</p>
-                    <p class="price">@car.Price лв.</p>
-                    <p class="desc">@car.Description</p>
-                </div>
-            }
-        </div>
-    </section>

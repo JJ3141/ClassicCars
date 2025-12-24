@@ -1,16 +1,15 @@
 ﻿@model Login
 
-@*@{
+@{
     ViewData["Title"] = "Login";
     Layout = "_Layout";
-}*@
+}
 
 <link rel="stylesheet" href="~/css/log-in.css" />
-@*//Add icon*@
 <div class="container">
     <div class="left">
         <div class="avatar">
-            <span class="icon"></span>
+            <span class="icon">👤</span>
         </div>
         <h1>My Profile</h1>
         <p>Classic cars member</p>
@@ -23,24 +22,24 @@
                 @Html.ValidationSummary()
             </div>
         }
-        <form asp-action="Login"method="post">
+    <form asp-action="Login" method="post">
             <div class="input-group">
-                <input asp-for="Username"
+                <input asp-for="UsernameOrEmail"
                        type="text"
-                       placeholder="Username"
+                       placeholder="Username or Email"
                        class="form-control"
                        required />
             </div>
-            <div class="input-group">
-                <input asp-for="Password"
-                       type="password"
-                       placeholder="Password"
-                       class="form-control"
-                       required />
-            </div>
+        <div class="input-group">
+            <input asp-for="Password"
+                   type="password"
+                   placeholder="Password"
+                   class="form-control"
+                   required />
+        </div>
 
-            <button type="submit">Log In</button>
-        </form>
+        <button type="submit">Log In</button>
+    </form>
 
         <p class="login">
             New here?

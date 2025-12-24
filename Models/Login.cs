@@ -5,11 +5,10 @@
 
     public class Login
 	{
-        [Required]
-        //[MaxLength(MaxLenghtUsername)]
-        public string Username { get; set; } = null!;
-        [Required]
   
+        public string UsernameOrEmail { get; set; }
+        //[MaxLength(MaxLenghtUsername)
+        [Required]
         public string Password { get; set; } = null!;
     }
 }

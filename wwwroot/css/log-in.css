@@ -41,9 +41,10 @@ body {
     justify-content: center;
 }
 
-    .avatar .icon {
-        font-size: 80px;
-    }
+.avatar .icon {
+    font-size: 80px;
+    margin-top:45px;
+}
 
 .left h1 {
     margin: 20px 0 10px;
@@ -60,29 +61,28 @@ body {
     width: 55%;
     padding: 70px 60px;
 }
-
-    .right h2 {
-        display: inline-block;
-        background: #ffffff;
-        padding: 10px 25px;
-        border-radius: 25px;
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
+.right h2 {
+    display: inline-block;
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
 
 .input-group {
     margin-bottom: 25px;
 }
 
-    .input-group input {
-        width: 100%;
-        padding: 15px 20px;
-        border-radius: 30px;
-        border: none;
-        background: #dddddd;
-        font-size: 16px;
-        outline: none;
-    }
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #dddddd;
+    font-size: 16px;
+    outline: none;
+}
 
 button {
     width: 100%;
@@ -95,23 +95,23 @@ button {
     transition: background-color 0.7s ease, color 0.7s ease, box-shadow 0.7s ease;
 }
 
-    button:hover {
-        background: #fff;
-        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
-    }
+button:hover {
+    background: #fff;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
 
 .login {
     margin-top: 25px;
     font-size: 18px;
 }
 
-    .login a {
-        margin-left: 10px;
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.login a {
+    margin-left: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .login a:hover {
-            text-decoration: underline;
-        }
+.login a:hover {
+    text-decoration: underline;
+}

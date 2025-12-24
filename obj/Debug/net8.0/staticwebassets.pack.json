@@ -5,16 +5,68 @@
       "PackagePath": "staticwebassets/ClassicCars.bundle.scp.css"
     },
     {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/collection-card.css",
+      "PackagePath": "staticwebassets/css/collection-card.css"
+    },
+    {
       "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/log-in.css",
       "PackagePath": "staticwebassets/css/log-in.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/profile.css",
+      "PackagePath": "staticwebassets/css/profile.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/register.css",
+      "PackagePath": "staticwebassets/css/register.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
     },
     {
       "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/Classic 1960s MGB Roadster in Navy.png",
+      "PackagePath": "staticwebassets/gallery/Classic 1960s MGB Roadster in Navy.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/clem-onojeghuo-GDYjF_dU8Ng-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/clem-onojeghuo-GDYjF_dU8Ng-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/jorgen-hendriksen-lX2YG5w4_gs-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/jorgen-hendriksen-lX2YG5w4_gs-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/meritt-thomas-SWt1dHle1eA-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/meritt-thomas-SWt1dHle1eA-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/nathan-dumlao-gQYUUn5byyE-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/nathan-dumlao-gQYUUn5byyE-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/robin-vet-q6LFMQ6wVZ0-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/stuart-garage-DkLmiGmPx2w-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/stuart-garage-DkLmiGmPx2w-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/stuart-garage-Gw7wXoY8l_A-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/stuart-garage-Gw7wXoY8l_A-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/tyler-b-Xuukfu43Uo8-unsplash.jpg",
+      "PackagePath": "staticwebassets/gallery/tyler-b-Xuukfu43Uo8-unsplash.jpg"
     },
     {
       "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/js/site.js",

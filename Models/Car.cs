@@ -17,20 +17,23 @@ namespace ClassicCars.Models
         [Range(1900, 2100)]
         public int Year { get; set; }
 
-        public string EngineType { get; set; }
+        public string? EngineType { get; set; }
 
         public int Horsepower { get; set; }
 
-        public string Condition { get; set; } 
+        public string? Condition { get; set; } 
 
         public decimal Price { get; set; }
 
         [Required]
         public string ImageUrl { get; set; } = null!;
 
-        public string Description { get; set; }
+        public string? Description { get; set;}
+
+        public string? Transmission { get; set;}
 
         public int? UserId { get; set; }
+
         public virtual User? User { get; set; }
     }
 }
