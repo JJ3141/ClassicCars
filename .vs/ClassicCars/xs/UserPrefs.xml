@@ -6,40 +6,43 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.ClassicCars PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CarController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Collection/Index.cshtml">
     <Files>
-      <File FileName="wwwroot/css/style.css" Line="9" Column="17" />
-      <File FileName="wwwroot/css/profile.css" Line="165" Column="2" />
-      <File FileName="Views/Profile/Index.cshtml" Line="7" Column="28" />
-      <File FileName="wwwroot/css/collection-card.css" Line="59" Column="19" />
-      <File FileName="Views/Collection/Index.cshtml" Line="15" Column="45" />
+      <File FileName="wwwroot/css/style.css" Line="247" Column="1" />
+      <File FileName="wwwroot/css/profile.css" />
+      <File FileName="Views/Profile/Index.cshtml" Line="96" Column="19" />
+      <File FileName="wwwroot/css/collection-card.css" Line="262" Column="7" />
+      <File FileName="Views/Collection/Index.cshtml" Line="116" Column="34" />
       <File FileName="wwwroot/css/log-in.css" Line="1" Column="1" />
-      <File FileName="Views/Register/Register.cshtml" Line="1" Column="1" />
-      <File FileName="wwwroot/lib/jquery-validation/dist/additional-methods.js" Line="502" Column="40" />
-      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Controllers/CollectionController.cs" Line="1" Column="1" />
+      <File FileName="Views/Register/Register.cshtml" />
+      <File FileName="wwwroot/lib/jquery-validation/dist/additional-methods.js" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Controllers/CollectionController.cs" Line="30" Column="37" />
       <File FileName="Controllers/GalleryController.cs" Line="1" Column="1" />
-      <File FileName="Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="wwwroot/css/register.css" Line="1" Column="1" />
-      <File FileName="Controllers/RegisterController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/ProfileController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/LoginController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/CarController.cs" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" />
+      <File FileName="wwwroot/css/register.css" />
+      <File FileName="Controllers/RegisterController.cs" />
+      <File FileName="Controllers/ProfileController.cs" />
+      <File FileName="Controllers/LoginController.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Controllers/CarController.cs" Line="33" Column="1" />
+      <File FileName="Views/Cars/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Details.cshtml" Line="66" Column="15" />
+      <File FileName="Views/Cars/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Index.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/css/car.css" Line="109" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClassicCars">
             <Node name="ClassicCars">
-              <Node name="Controllers" expanded="True">
-                <Node name="CarController.cs" selected="True" />
-              </Node>
               <Node name="Views">
-                <Node name="Home" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+                <Node name="Collection">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Profile" expanded="True" />
               </Node>
             </Node>
           </Node>

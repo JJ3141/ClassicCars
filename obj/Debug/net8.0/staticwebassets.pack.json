@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/ClassicCars.bundle.scp.css"
     },
     {
+      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/car.css",
+      "PackagePath": "staticwebassets/css/car.css"
+    },
+    {
       "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/collection-card.css",
       "PackagePath": "staticwebassets/css/collection-card.css"
     },

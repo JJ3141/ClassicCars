@@ -20,10 +20,17 @@ namespace ClassicCars.Controllers
         {
             return View();
         }
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View();
+            var car = _context.Cars
+                .FirstOrDefault(c => c.Id == id);
+
+            if (car == null)
+                return NotFound();
+
+            return View(car);
         }
+
         public IActionResult Delete(int? id)
         {
             if (id == null) return NotFound();

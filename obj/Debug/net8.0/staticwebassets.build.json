@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jBqHdrpVZcG3qkQcy3+SL+Q2hOWttZLpZw5/LMRO968=",
+  "Hash": "/57gtdehHHQrbgLpa5YMr6KOoW5uiCnU45Q4sEP6Uxg=",
   "Source": "ClassicCars",
   "BasePath": "_content/ClassicCars",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/scopedcss/projectbundle/ClassicCars.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/car.css",
+      "SourceId": "ClassicCars",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/",
+      "BasePath": "_content/ClassicCars",
+      "RelativePath": "css/car.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/car.css"
     },
     {
       "Identity": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/collection-card.css",

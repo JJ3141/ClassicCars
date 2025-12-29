@@ -18,14 +18,24 @@ namespace ClassicCars.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
+            int carsPerPage = 24;
+
             var cars = _context.Cars
-                .Include(c => c.User)
+                .Skip((page - 1) * carsPerPage)
+                .Take(carsPerPage)
                 .ToList();
+
+            int totalCars = _context.Cars.Count();
+            int totalPages = (int)Math.Ceiling(totalCars / (double)carsPerPage);
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
 
             return View(cars);
         }
+
 
     }
 }

@@ -42,18 +42,41 @@
     <div class="cards" id="cardsContainer">
         @foreach (var car in Model)
         {
-            <div class="card"
-                 data-model="@($"{car.Brand} {car.Model}")"
-                 data-price="@car.Price">
+            <a asp-controller="Cars"
+               asp-action="Details"
+               asp-route-id="@car.Id"
+               class="card-link">
 
-                <div class="card-img">
-                    <img src="@car.ImageUrl" alt="Car" />
+                <div class="card"
+                     data-model="@($"{car.Brand} {car.Model}")"
+                     data-price="@car.Price">
+
+                    <div class="card-img">
+                        <img src="@car.ImageUrl" alt="Car" />
+                    </div>
+
+                    <p class="model">@car.Brand @car.Model</p>
+                    <p class="price">@car.Price лв.</p>
+                    <p class="desc">@car.Description</p>
                 </div>
 
-                <p class="model">@car.Brand @car.Model</p>
-                <p class="price">@car.Price лв.</p>
-                <p class="desc">@car.Description</p>
-            </div>
+            </a>
+
+
+        }
+
+    </div>
+    <div class="pagination">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            if (i == ViewBag.CurrentPage)
+            {
+                <span class="page active">@i</span>
+            }
+            else
+            {
+                <a class="page" asp-action="Index" asp-route-page="@i">@i</a>
+            }
         }
     </div>
 </div>
@@ -82,15 +105,16 @@
 
         function sortByPrice() {
             const container = document.getElementById("cardsContainer");
-            const cards = Array.from(container.querySelectorAll(".card"));
+            const cards = Array.from(container.querySelectorAll(".card-link"));
 
             cards.sort((a, b) => {
-                const priceA = Number(a.dataset.price);
-                const priceB = Number(b.dataset.price);
+                const priceA = Number(a.querySelector(".card").dataset.price);
+                const priceB = Number(b.querySelector(".card").dataset.price);
                 return priceAsc ? priceA - priceB : priceB - priceA;
             });
 
             priceAsc = !priceAsc;
             cards.forEach(card => container.appendChild(card));
-        }</script>
+        }
+</script>
 }
