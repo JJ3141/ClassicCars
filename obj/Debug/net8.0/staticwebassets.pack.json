@@ -1,307 +1,307 @@
 {
   "Files": [
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/Debug/net8.0/scopedcss/projectbundle/ClassicCars.bundle.scp.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/obj/Debug/net8.0/scopedcss/projectbundle/ClassicCars.bundle.scp.css",
       "PackagePath": "staticwebassets/ClassicCars.bundle.scp.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/car.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/car.css",
       "PackagePath": "staticwebassets/css/car.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/collection-card.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/collection-card.css",
       "PackagePath": "staticwebassets/css/collection-card.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/log-in.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/log-in.css",
       "PackagePath": "staticwebassets/css/log-in.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/profile.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/profile.css",
       "PackagePath": "staticwebassets/css/profile.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/register.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/register.css",
       "PackagePath": "staticwebassets/css/register.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/css/style.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/css/style.css",
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/favicon.ico",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/Classic 1960s MGB Roadster in Navy.png",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/Classic 1960s MGB Roadster in Navy.png",
       "PackagePath": "staticwebassets/gallery/Classic 1960s MGB Roadster in Navy.png"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/clem-onojeghuo-GDYjF_dU8Ng-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/clem-onojeghuo-GDYjF_dU8Ng-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/clem-onojeghuo-GDYjF_dU8Ng-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/jorgen-hendriksen-lX2YG5w4_gs-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/jorgen-hendriksen-lX2YG5w4_gs-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/jorgen-hendriksen-lX2YG5w4_gs-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/meritt-thomas-SWt1dHle1eA-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/meritt-thomas-SWt1dHle1eA-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/meritt-thomas-SWt1dHle1eA-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/nathan-dumlao-gQYUUn5byyE-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/nathan-dumlao-gQYUUn5byyE-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/nathan-dumlao-gQYUUn5byyE-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/robin-vet-q6LFMQ6wVZ0-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/robin-vet-q6LFMQ6wVZ0-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/stuart-garage-DkLmiGmPx2w-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/stuart-garage-DkLmiGmPx2w-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/stuart-garage-DkLmiGmPx2w-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/stuart-garage-Gw7wXoY8l_A-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/stuart-garage-Gw7wXoY8l_A-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/stuart-garage-Gw7wXoY8l_A-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/gallery/tyler-b-Xuukfu43Uo8-unsplash.jpg",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/gallery/tyler-b-Xuukfu43Uo8-unsplash.jpg",
       "PackagePath": "staticwebassets/gallery/tyler-b-Xuukfu43Uo8-unsplash.jpg"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/js/site.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {

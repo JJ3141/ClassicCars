@@ -6,7 +6,9 @@
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-
+.car-card-link.extra {
+    display: none;
+}
 .page {
     min-height: 100vh;
     background: #F3ECD7;

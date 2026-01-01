@@ -7698,11 +7698,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/ClassicCars.csproj",
+      "projectUniqueName": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj",
       "projectName": "ClassicCars",
-      "projectPath": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/ClassicCars.csproj",
+      "projectPath": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj",
       "packagesPath": "/Users/macbookpro/.nuget/packages/",
-      "outputPath": "/Users/macbookpro/Desktop/ClassicCars/ClassicCars/obj/",
+      "outputPath": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/macbookpro/.nuget/NuGet/NuGet.Config"

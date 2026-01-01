@@ -17,71 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ClassicCars
 build_property.RootNamespace = ClassicCars
-build_property.ProjectDir = /Users/macbookpro/Desktop/ClassicCars/ClassicCars/
+build_property.ProjectDir = /Users/macbookpro/Desktop/Classic Cars2/Untitled/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/macbookpro/Desktop/ClassicCars/ClassicCars
+build_property.MSBuildProjectDirectory = /Users/macbookpro/Desktop/Classic Cars2/Untitled
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Cars/Create.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Cars/Delete.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Cars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Cars/Details.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Cars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Cars/Edit.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Cars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Cars/Index.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Collection/Index.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Collection/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29sbGVjdGlvbi9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Home/Index.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Login/Login.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Profile/Index.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Register/Register.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Register/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Shared/Error.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/_ViewImports.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/_ViewStart.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/macbookpro/Desktop/ClassicCars/ClassicCars/Views/Shared/_Layout.cshtml]
+[/Users/macbookpro/Desktop/Classic Cars2/Untitled/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2i5vdpats4

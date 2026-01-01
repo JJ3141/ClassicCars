@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<ClassicCars.Models.Car>
 
-<link rel="stylesheet" href="~/css/collection-card.css"/>
+<link rel="stylesheet" href="~/css/collection-card.css" />
 
 <header class="nav-bar">
     <div class="logo">R</div>
     <nav>
         <a asp-controller="Home" asp-action="Index">Home</a>
         <a asp-controller="Collection" asp-action="Index">Collections</a>
-        <a asp-controller="Gallery" asp-action="Gallery">Gallery</a>
 
         @if (Context.Session.GetInt32("UserId") != null)
         {
@@ -47,21 +46,20 @@
                asp-route-id="@car.Id"
                class="card-link">
 
-                <div class="card"
-                     data-model="@($"{car.Brand} {car.Model}")"
-                     data-price="@car.Price">
-
+                <div class="card" data-price="@car.Price" data-model="@car.Brand @car.Model">
                     <div class="card-img">
                         <img src="@car.ImageUrl" alt="Car" />
                     </div>
 
-                    <p class="model">@car.Brand @car.Model</p>
-                    <p class="price">@car.Price лв.</p>
-                    <p class="desc">@car.Description</p>
+                    <div class="card-info">
+                        <span><strong>Brand:</strong> @car.Brand</span>
+                        <span><strong>Model:</strong> @car.Model</span>
+                        <span><strong>Price:</strong> @car.Price лв.</span>
+                    </div>
+
+                    <p class="desc"><strong>Description:</strong> @car.Description</p>
                 </div>
-
             </a>
-
 
         }
 
@@ -86,17 +84,21 @@
 </section>
 
 @section Scripts {
-    <script>document.addEventListener("DOMContentLoaded", () => {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
             const searchInput = document.getElementById("searchInput");
             const container = document.getElementById("cardsContainer");
-
             searchInput.addEventListener("input", () => {
                 const value = searchInput.value.toLowerCase();
-                const cards = container.querySelectorAll(".card");
-
-                cards.forEach(card => {
-                    const model = card.dataset.model.toLowerCase();
-                    card.style.display = model.includes(value) ? "flex" : "none";
+                const cards = Array.from(container.querySelectorAll(".card-link"));
+                const visibleCards = cards.filter(card => {
+                    const model = card.querySelector(".card-info span:nth-child(1)").textContent.toLowerCase();
+                    return model.includes(value);
+                });
+                cards.forEach(card => card.style.display = "none");
+                visibleCards.forEach(card => {
+                    card.style.display = "block";
+                    container.appendChild(card);
                 });
             });
         });
@@ -108,13 +110,13 @@
             const cards = Array.from(container.querySelectorAll(".card-link"));
 
             cards.sort((a, b) => {
-                const priceA = Number(a.querySelector(".card").dataset.price);
-                const priceB = Number(b.querySelector(".card").dataset.price);
+                const priceA = Number(a.querySelector(".card-info span:nth-child(3)").textContent.replace(/\D/g, ''));
+                const priceB = Number(b.querySelector(".card-info span:nth-child(3)").textContent.replace(/\D/g, ''));
                 return priceAsc ? priceA - priceB : priceB - priceA;
             });
 
             priceAsc = !priceAsc;
             cards.forEach(card => container.appendChild(card));
-        }
-</script>
+        }</script>
 }
+

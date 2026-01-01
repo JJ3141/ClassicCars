@@ -1,7 +1,5 @@
-﻿@model ClassicCars.Models.User
-
+﻿
 <link rel="stylesheet" href="~/css/profile.css" />
-
 <div class="container">
 
     <aside class="profile">
@@ -23,8 +21,6 @@
             <nav>
                 <a asp-controller="Home" asp-action="Index">Home</a>
                 <a asp-controller="Collection" asp-action="Index">Collections</a>
-                <a asp-controller="Gallery" asp-action="Gallery">Gallery</a>
-
                 @if (Context.Session.GetInt32("UserId") != null)
                 {
                     <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;">
@@ -79,21 +75,31 @@
                     </div>
                 </div>
             </div>
-
-
+            @{
+                int i = 0;
+            }
             <div class="car-list">
-                @for (int i = 0; i < Model.Cars.Count; i++)
+                @foreach (var car in Model.Cars)
                 {
-                    var car = Model.Cars.ElementAt(i);
                     var extraClass = i >= 3 ? "extra" : "";
-                    var displayStyle = i >= 3 ? "display:none;" : "";
-                    <div class="car-card @extraClass" style="@displayStyle">
-                        <div class="car-image" style="background-image:url('@car.ImageUrl')"></div>
-                        <p><strong>@car.Model</strong> <span class="price">@car.Price</span></p>
-                        <p class="desc">@car.Description</p>
-                    </div>
+                    <a asp-controller="Cars"
+                       asp-action="Details"
+                       asp-route-id="@car.Id"
+                       class="car-card-link @extraClass"
+                       style="text-decoration:none; color:inherit;">
+
+                        <div class="car-card">
+                            <div class="car-image" style="background-image:url('@car.ImageUrl')"></div>
+                            <p><strong>@car.Model</strong> <span class="price">@car.Price</span></p>
+                            <p class="desc">@car.Description</p>
+                        </div>
+
+                    </a>
+                    i++;
                 }
             </div>
+
+
 
             <button class="more-btn" onclick="toggleCars()">More</button>
         </section>
@@ -111,12 +117,13 @@
 <script>let expanded = false;
 
     function toggleCars() {
-        const extraCars = document.querySelectorAll('.car-card.extra');
+        const extraCars = document.querySelectorAll('.car-card-link.extra');
         const btn = document.querySelector('.more-btn');
         extraCars.forEach(car => car.style.display = expanded ? 'none' : 'block');
         btn.textContent = expanded ? 'More' : 'Less';
         expanded = !expanded;
     }
+
 
     function toggleAddCarForm() {
         const modal = document.getElementById("addCarModal");
@@ -127,7 +134,7 @@
         const modal = document.getElementById("addCarModal");
         const form = modal.querySelector("form");
 
-        form.reset();         
-        modal.style.display = "none"; 
+        form.reset();
+        modal.style.display = "none";
     }</script>
 

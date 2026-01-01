@@ -1,4 +1,5 @@
-﻿* {
+﻿
+* {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
@@ -207,11 +208,6 @@ hr {
     flex-wrap: wrap;
     gap: 20px;
 }
-
-.car-card.extra {
-    display: none;
-}
-
 .more-btn {
     margin-top: 20px;
     padding: 10px 25px;
@@ -322,4 +318,7 @@ hr {
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: bold;
+}
+.car-card-link.extra {
+    display: none;
 }
