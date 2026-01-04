@@ -1,28 +1,59 @@
 ﻿<Properties StartupConfiguration="{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}|https">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/macbookpro/Desktop/Classic Cars2/Untitled/Controllers/ProfileController.cs" relfile="Controllers/ProfileController.cs" line="32" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.ClassicCars PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/collection-card.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Profile/Index.cshtml">
     <Files>
-      <File FileName="wwwroot/css/collection-card.css" Line="244" Column="1" />
-      <File FileName="Views/Collection/Index.cshtml" />
-      <File FileName="Views/Profile/Index.cshtml" />
-      <File FileName="wwwroot/css/profile.css" Line="57" Column="10" />
+      <File FileName="wwwroot/css/collection-card.css" />
+      <File FileName="Views/Collection/Index.cshtml" Line="10" Column="1" />
+      <File FileName="Views/Profile/Index.cshtml" Line="54" Column="53" />
+      <File FileName="wwwroot/css/profile.css" />
+      <File FileName="wwwroot/css/log-in.css" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Views/Login/Login.cshtml" />
+      <File FileName="Controllers/CarController.cs" Line="38" Column="58" />
+      <File FileName="Views/Cars/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Details.cshtml" Line="16" Column="49" />
+      <File FileName="Views/Cars/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cars/Index.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/css/car.css" />
+      <File FileName="wwwroot/css/register.css" />
+      <File FileName="wwwroot/css/style.css" Line="1" Column="1" />
+      <File FileName="Models/Car.cs" Line="34" Column="1" />
+      <File FileName="Models/User.cs" Line="4" Column="1" />
+      <File FileName="Controllers/CollectionController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/RegisterController.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="25" Column="1" />
+      <File FileName="EntityValidations.cs" Line="1" Column="1" />
+      <File FileName="Controllers/ProfileController.cs" Line="41" Column="10" />
+      <File FileName="Views/Register/Register.cshtml" Line="1" Column="1" />
+      <File FileName="Models/Login.cs" Line="1" Column="1" />
+      <File FileName="Models/Register.cs" Line="1" Column="1" />
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Migrations/20260104195041_wtf.Designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClassicCars">
-            <Node name="ClassicCars" expanded="True">
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="collection-card.css" selected="True" />
+            <Node name="ClassicCars">
+              <Node name="Views">
+                <Node name="Cars" expanded="True" />
+                <Node name="Profile">
+                  <Node name="Index.cshtml" selected="True" />
                 </Node>
+                <Node name="Register" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

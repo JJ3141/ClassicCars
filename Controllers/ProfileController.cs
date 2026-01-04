@@ -31,17 +31,25 @@ public class ProfileController : Controller
     public IActionResult Create(Car car)
     {
         var userId = HttpContext.Session.GetInt32("UserId");
+        //Console.WriteLine($"PROFILE PAGE UserId = {userId}");
+        //Console.WriteLine($"SESSION UserId = {userId}");
+        //Console.WriteLine($"BEFORE SET car.UserId = {car.UserId}");
         if (userId == null) return RedirectToAction("Login", "Login");
 
 
         if (ModelState.IsValid)
         {
             car.UserId = userId.Value;
+            //Console.WriteLine($"AFTER SET car.UserId = {car.UserId}");
             _context.Cars.Add(car);
+            //Console.WriteLine($"UserId = {car.UserId}");
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
         return RedirectToAction("Index", "Profile");
+
+
+
     }
 }

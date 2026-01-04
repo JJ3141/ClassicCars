@@ -51,6 +51,7 @@
                 <div class="modal-content">
                     <div class="modal-left">
                         <form asp-controller="Profile" asp-action="Create" method="post">
+                            @Html.AntiForgeryToken()
                             <input type="text" name="Brand" placeholder="Brand" required />
                             <input type="text" name="Model" placeholder="Model" required />
                             <input type="number" name="Year" placeholder="Year (1900-2100)" min="1900" max="2100" required />

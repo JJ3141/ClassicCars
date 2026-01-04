@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace ClassicCars.Models
 {
@@ -32,8 +34,11 @@ namespace ClassicCars.Models
 
         public string? Transmission { get; set;}
 
-        public int? UserId { get; set; }
+        [ForeignKey(nameof(User))]
+        public int UserId { get; set; }
 
-        public virtual User? User { get; set; }
+        [ValidateNever]
+        public User User { get; set; } = null!;
+
     }
 }
