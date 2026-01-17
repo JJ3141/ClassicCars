@@ -13,6 +13,7 @@ namespace ClassicCars.Data
 
         public DbSet<Car> Cars { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ServiceRecord> ServiceRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

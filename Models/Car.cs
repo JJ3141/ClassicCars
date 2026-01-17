@@ -43,5 +43,8 @@ namespace ClassicCars.Models
         [ValidateNever]
         public User User { get; set; } = null!;
 
+        public virtual ICollection<ServiceRecord> ServiceRecord { get; set; }
+            = new HashSet<ServiceRecord>();
+
     }
 }

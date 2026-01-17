@@ -1,11 +1,11 @@
-﻿using System;
-namespace ClassicCars.Models
+﻿namespace ClassicCars.Models
 {
-	public class ServiceType
+	public enum ServiceType
 	{
-		public ServiceType()
-		{
-		}
+		Maintenance,
+		Repair,
+		Inspection,
+		Restoration
 	}
 }
 
