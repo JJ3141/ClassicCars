@@ -27,8 +27,11 @@ namespace ClassicCars.Models
 
         public decimal Price { get; set; }
 
+        public byte[]? ImageData { get; set; }
+
+        [NotMapped]
         [Required]
-        public string ImageUrl { get; set; } = null!;
+        public IFormFile Image { get; set; } = null!;
 
         public string? Description { get; set;}
 

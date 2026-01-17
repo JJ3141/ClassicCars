@@ -36,6 +36,11 @@ public class ProfileController : Controller
         //Console.WriteLine($"BEFORE SET car.UserId = {car.UserId}");
         if (userId == null) return RedirectToAction("Login", "Login");
 
+        using (var memoryStream = new MemoryStream())
+        {
+            car.Image.CopyTo(memoryStream);
+            car.ImageData = memoryStream.ToArray();
+        }
 
         if (ModelState.IsValid)
         {
@@ -48,8 +53,6 @@ public class ProfileController : Controller
         }
 
         return RedirectToAction("Index", "Profile");
-
-
 
     }
 }

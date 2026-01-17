@@ -41,6 +41,9 @@
     <div class="cards" id="cardsContainer">
         @foreach (var car in Model)
         {
+            var base64 = Convert.ToBase64String(car.ImageData);
+            var imgSrc = $"data:image/jpeg;base64,{base64}";
+
             <a asp-controller="Cars"
                asp-action="Details"
                asp-route-id="@car.Id"
@@ -48,7 +51,7 @@
 
                 <div class="card" data-price="@car.Price" data-model="@car.Brand @car.Model">
                     <div class="card-img">
-                        <img src="@car.ImageUrl" alt="Car" />
+                        <img src="@imgSrc" alt="Car" />
                     </div>
 
                     <div class="card-info">
@@ -60,8 +63,8 @@
                     <p class="desc"><strong>Description:</strong> @car.Description</p>
                 </div>
             </a>
-
         }
+
 
     </div>
     <div class="pagination">
