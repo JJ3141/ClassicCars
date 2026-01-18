@@ -1,6 +1,6 @@
 ﻿@model ClassicCars.Models.Car
 
-<link rel="stylesheet" href="~/css/car.css"/>
+<link rel="stylesheet" href="~/css/car.css" />
 
 <div class="page">
     <header class="nav-bar">
@@ -37,10 +37,8 @@
                 var imgSrc = $"data:image/jpeg;base64,{base64}";
             }
 
-            <div class="image-box"
-                 style="background-image:url('@imgSrc')">
+            <div class="image-box" style="background-image:url('@imgSrc')">
             </div>
-
         </div>
 
         <div class="right">
@@ -60,15 +58,115 @@
                 <div class="field">Transmission: @Model.Transmission</div>
             </div>
         </div>
-    </div>
+    </div> 
 
     <div class="description">
         <strong>Description:</strong>
         <p>@Model.Description</p>
     </div>
+
+    <div class="services">
+        <strong>Services:</strong>
+
+        @if (Model.ServiceRecord != null && Model.ServiceRecord.Any())
+        {
+            <ul class="service-list">
+                @foreach (var service in Model.ServiceRecord
+                   .OrderByDescending(s => s.ServiceDate)
+                   .Take(2))
+                {
+                    <li class="service-item">
+                        <div><strong>Date:</strong> @service.ServiceDate</div>
+                        <div><strong>Description:</strong> @service.Description</div>
+                        <div><strong>Service type:</strong> @service.ServiceType</div>
+                        <div><strong>Mileage:</strong> @service.Mileage</div>
+                    </li>
+                }
+            </ul>
+
+            @if (Model.ServiceRecord.Count > 2)
+            {
+                <a asp-controller="ServiceRecord"
+                   asp-action="Edit"
+                   asp-route-carId="@Model.Id"
+                   class="more-link">
+                    MORE
+                </a>
+            }
+        }
+        else
+        {
+            <p>No service records available.</p>
+        }
+
+        <div class="service-buttons">
+            @{
+                var userId = Context.Session.GetInt32("UserId");
+            }
+
+            @if (userId != null && userId == Model.UserId)
+            {
+                <button type="button" class="btn" onclick="toggleAddServiceForm()">
+                    Add Service
+                </button>
+
+                <a asp-controller="ServiceRecord"
+                   asp-action="Index"
+                   asp-route-carId="@Model.Id"
+                   class="btn">
+                    Edit Service
+                </a>
+            }
+        </div>
+    </div> 
+
+    <div id="addServiceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <form asp-controller="ServiceRecord"
+                      asp-action="Create"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="CarId" value="@Model.Id" />
+
+                    <input type="date" name="ServiceDate" placeholder="Date" required />
+                    <input type="number" name="Mileage" placeholder="Mileage" required />
+                    <textarea name="Description" placeholder="Description" required></textarea>
+
+                    <select name="ServiceType" class="service-select" required>
+                        <option value="" disabled selected>Select service type</option>
+                        @foreach (ServiceType type in Enum.GetValues(typeof(ServiceType)))
+                        {
+                            <option value="@type">@type</option>
+                        }
+                    </select>
+
+                    <button type="submit" class="submit-btn">ADD SERVICE</button>
+                    <button type="button" class="cancel-btn" onclick="cancelAddService()">Undo</button>
+                </form>
+            </div>
+
+            <div class="modal-right">
+                <div class="car-preview">🔧</div>
+                <span class="preview-text">Service record</span>
+            </div>
+        </div>
+    </div> 
+
     <section class="footer-hero">
         <h3>Discover the Golden Age of the Automobiles</h3>
     </section>
-</div>
+</div> 
 
+<script>function toggleAddServiceForm() {
+        const modal = document.getElementById("addServiceModal");
+        modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+    }
 
+    function cancelAddService() {
+        const modal = document.getElementById("addServiceModal");
+        const form = modal.querySelector("form");
+        form.reset();
+        modal.style.display = "none";
+    }</script>

@@ -5,7 +5,9 @@
 		Maintenance,
 		Repair,
 		Inspection,
-		Restoration
-	}
+		Restoration,
+        Other
+    }
+  
 }
 

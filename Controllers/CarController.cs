@@ -22,13 +22,16 @@ namespace ClassicCars.Controllers
         }
         public IActionResult Details(int id)
         {
-            var car = _context.Cars
+
+                 var car = _context.Cars
+                .Include(c => c.ServiceRecord) 
                 .FirstOrDefault(c => c.Id == id);
 
             if (car == null)
                 return NotFound();
 
-            return View(car);
+            return View(car); ;
+
         }
 
         public IActionResult Delete(int? id)
