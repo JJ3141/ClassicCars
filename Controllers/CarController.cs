@@ -1,61 +1,73 @@
-﻿using ClassicCars.Data;
-using ClassicCars.Models;
+﻿using ClassicCars.Models;
+using ClassicCars.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 namespace ClassicCars.Controllers
 {
+    [Authorize]
     public class CarsController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public CarsController(ApplicationDbContext context)
+        private readonly ICarService _carService;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public CarsController(
+            ICarService carService,
+            UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _carService = carService;
+            _userManager = userManager;
         }
-        public IActionResult Index() {
-            var cars = _context.Cars.ToList();
+
+        public async Task<IActionResult> Index()
+        {
+            var cars = await _carService.GetAllAsync();
             return View(cars);
         }
-        public IActionResult Edit()
-        {
-            return View();
-        }
-        public IActionResult Details(int id)
-        {
 
-                 var car = _context.Cars
-                .Include(c => c.ServiceRecord) 
-                .FirstOrDefault(c => c.Id == id);
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var car = await _carService.GetDetailsAsync(id);
 
             if (car == null)
                 return NotFound();
 
-            return View(car); ;
-
+            return View(car);
         }
 
-        public IActionResult Delete(int? id)
-        {
-            if (id == null) return NotFound();
 
-            var car = _context.Cars.FirstOrDefault(c => c.Id == id);
-            if (car == null) return NotFound();
+        public async Task<IActionResult> Delete(int id)
+        {
+            var car = await _carService.GetDetailsAsync(id);
+
+            if (car == null)
+                return NotFound();
+
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null || car.UserId != user.Id)
+                return Forbid();
 
             return View(car);
         }
 
-        [HttpPost, ActionName("DeleteConfirmed")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var car = _context.Cars.Find(id);
-            if (car != null)
-            {
-                _context.Cars.Remove(car);
-                _context.SaveChanges();
-            }
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Unauthorized();
+
+            var success = await _carService.DeleteAsync(id, user.Id);
+
+            if (!success)
+                return Forbid();
+
             return RedirectToAction(nameof(Index));
         }
+
 
     }
 }

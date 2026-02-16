@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ClassicCars.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using static ClassicCars.EntityValidations;
 
 namespace ClassicCars.Models
 {
@@ -10,41 +10,44 @@ namespace ClassicCars.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required, MaxLength(CarBrandMaxLength)]
         public string Brand { get; set; } = null!;
 
-        [Required]
+        [Required, MaxLength(CarModelMaxLength)]
         public string Model { get; set; } = null!;
 
         [Range(1900, 2100)]
         public int Year { get; set; }
 
+        [MaxLength(EngineTypeMaxLength)]
         public string? EngineType { get; set; }
 
+        [Required]
+        [Range(1, 10000)]
         public int Horsepower { get; set; }
 
-        public string? Condition { get; set; } 
+        [MaxLength(ConditionMaxLength)]
+        public string? Condition { get; set; }
 
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
         public byte[]? ImageData { get; set; }
 
         [NotMapped]
-        [Required]
-        public IFormFile Image { get; set; } = null!;
+        [Display(Name = "Upload Image")]
+        public IFormFile? Image { get; set; }
 
-        public string? Description { get; set;}
+        [MaxLength(DescriptionMaxLength)]
+        public string? Description { get; set; }
 
-        public string? Transmission { get; set;}
+        [MaxLength(TransmissionMaxLength)]
+        public string? Transmission { get; set; }
 
-        [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
-
-        [ValidateNever]
-        public User User { get; set; } = null!;
+        public string UserId { get; set; } = null!;
+        public ApplicationUser User { get; set; } = null!;
 
         public virtual ICollection<ServiceRecord> ServiceRecord { get; set; }
             = new HashSet<ServiceRecord>();
-
     }
 }

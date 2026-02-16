@@ -1,44 +1,23 @@
-﻿@model ClassicCars.Models.Car
-
+﻿@model ClassicCars.ViewModels.CarDetailsViewModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 <link rel="stylesheet" href="~/css/car.css" />
 
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    var isOwner = currentUser != null && currentUser.Id == Model.UserId;
+}
+
 <div class="page">
-    <header class="nav-bar">
-        <div class="logo">R</div>
-        <nav>
-            <a asp-controller="Home" asp-action="Index">Home</a>
-            <a asp-controller="Collection" asp-action="Index">Collections</a>
-            @if (Context.Session.GetInt32("UserId") != null)
-            {
-                <form asp-controller="Profile" asp-action="Index" method="get" style="display:inline;">
-                    <button type="submit" class="profile-btn">Profile</button>
-                </form>
-                <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;">
-                    <button type="submit" class="logout-btn">Log Out</button>
-                </form>
-            }
-            else
-            {
-                <form asp-controller="Register" asp-action="Register" method="get" style="display:inline;">
-                    <button type="submit" class="signin-btn">Sign In</button>
-                </form>
-
-                <form asp-controller="Login" asp-action="Login" method="get" style="display:inline;">
-                    <button type="submit" class="login-btn">Log In</button>
-                </form>
-            }
-        </nav>
-    </header>
-
+    @await Html.PartialAsync("_NavBar")
     <div class="content">
         <div class="left">
             @{
                 var base64 = Convert.ToBase64String(Model.ImageData);
                 var imgSrc = $"data:image/jpeg;base64,{base64}";
             }
-
-            <div class="image-box" style="background-image:url('@imgSrc')">
-            </div>
+            <div class="image-box" style="background-image:url('@imgSrc')"></div>
         </div>
 
         <div class="right">
@@ -50,7 +29,6 @@
             </div>
 
             <div class="tech-title">Technical data</div>
-
             <div class="tech-box">
                 <div class="field">Engine type: @Model.EngineType</div>
                 <div class="field">Horsepower: @Model.Horsepower</div>
@@ -58,7 +36,7 @@
                 <div class="field">Transmission: @Model.Transmission</div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="description">
         <strong>Description:</strong>
@@ -68,31 +46,28 @@
     <div class="services">
         <strong>Services:</strong>
 
-        @if (Model.ServiceRecord != null && Model.ServiceRecord.Any())
+        @if (Model.ServiceRecords != null && Model.ServiceRecords.Any())
         {
             <ul class="service-list">
-                @foreach (var service in Model.ServiceRecord
-                   .OrderByDescending(s => s.ServiceDate)
-                   .Take(2))
+                @foreach (var service in Model.ServiceRecords.OrderByDescending(s => s.ServiceDate))
                 {
-                    <li class="service-item">
-                        <div><strong>Date:</strong> @service.ServiceDate</div>
+                    <li class="service-item" data-id="@service.Id"
+                        data-date="@service.ServiceDate.ToString("yyyy-MM-dd")"
+                        data-mileage="@service.Mileage"
+                        data-description="@service.Description"
+                        data-type="@service.ServiceType">
+                        <div><strong>Date:</strong> @service.ServiceDate.ToString("yyyy-MM-dd")</div>
                         <div><strong>Description:</strong> @service.Description</div>
                         <div><strong>Service type:</strong> @service.ServiceType</div>
                         <div><strong>Mileage:</strong> @service.Mileage</div>
+
+                        @if (isOwner)
+                        {
+                            <button type="button" class="btn" onclick="toggleEditServiceForm(@service.Id)">Edit</button>
+                        }
                     </li>
                 }
             </ul>
-
-            @if (Model.ServiceRecord.Count > 2)
-            {
-                <a asp-controller="ServiceRecord"
-                   asp-action="Edit"
-                   asp-route-carId="@Model.Id"
-                   class="more-link">
-                    MORE
-                </a>
-            }
         }
         else
         {
@@ -100,40 +75,22 @@
         }
 
         <div class="service-buttons">
-            @{
-                var userId = Context.Session.GetInt32("UserId");
-            }
-
-            @if (userId != null && userId == Model.UserId)
+            @if (isOwner)
             {
-                <button type="button" class="btn" onclick="toggleAddServiceForm()">
-                    Add Service
-                </button>
-
-                <a asp-controller="ServiceRecord"
-                   asp-action="Index"
-                   asp-route-carId="@Model.Id"
-                   class="btn">
-                    Edit Service
-                </a>
+                <button type="button" class="btn" onclick="toggleAddServiceForm()">Add Service</button>
             }
         </div>
-    </div> 
+    </div>
 
     <div id="addServiceModal" class="modal">
         <div class="modal-content">
             <div class="modal-left">
-                <form asp-controller="ServiceRecord"
-                      asp-action="Create"
-                      method="post">
-
+                <form asp-controller="ServiceRecord" asp-action="Create" method="post">
                     @Html.AntiForgeryToken()
                     <input type="hidden" name="CarId" value="@Model.Id" />
-
                     <input type="date" name="ServiceDate" placeholder="Date" required />
                     <input type="number" name="Mileage" placeholder="Mileage" required />
                     <textarea name="Description" placeholder="Description" required></textarea>
-
                     <select name="ServiceType" class="service-select" required>
                         <option value="" disabled selected>Select service type</option>
                         @foreach (ServiceType type in Enum.GetValues(typeof(ServiceType)))
@@ -141,23 +98,46 @@
                             <option value="@type">@type</option>
                         }
                     </select>
-
                     <button type="submit" class="submit-btn">ADD SERVICE</button>
                     <button type="button" class="cancel-btn" onclick="cancelAddService()">Undo</button>
                 </form>
             </div>
-
             <div class="modal-right">
                 <div class="car-preview">🔧</div>
                 <span class="preview-text">Service record</span>
             </div>
         </div>
-    </div> 
+    </div>
 
-    <section class="footer-hero">
-        <h3>Discover the Golden Age of the Automobiles</h3>
-    </section>
-</div> 
+    <div id="editServiceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <form id="editServiceForm" asp-controller="ServiceRecord" asp-action="Edit" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="Id" id="editServiceId" value="" />
+                    <input type="hidden" name="CarId" value="@Model.Id" />
+                    <input type="date" name="ServiceDate" id="editServiceDate" required />
+                    <input type="number" name="Mileage" id="editServiceMileage" required />
+                    <textarea name="Description" id="editServiceDescription" required></textarea>
+                    <select name="ServiceType" id="editServiceType" class="service-select" required>
+                        @foreach (ServiceType type in Enum.GetValues(typeof(ServiceType)))
+                        {
+                            <option value="@type">@type</option>
+                        }
+                    </select>
+                    <button type="submit" class="submit-btn">EDIT SERVICE</button>
+                    <button type="button" class="cancel-btn" onclick="cancelEditService()">Undo</button>
+                </form>
+
+            </div>
+            <div class="modal-right">
+                <div class="car-preview">✏️</div>
+                <span class="preview-text">Edit Service record</span>
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_Footer")
+</div>
 
 <script>function toggleAddServiceForm() {
         const modal = document.getElementById("addServiceModal");
@@ -166,7 +146,26 @@
 
     function cancelAddService() {
         const modal = document.getElementById("addServiceModal");
-        const form = modal.querySelector("form");
-        form.reset();
+        modal.querySelector("form").reset();
+        modal.style.display = "none";
+    }
+
+    function toggleEditServiceForm(serviceId) {
+        const modal = document.getElementById("editServiceModal");
+        const item = document.querySelector(`.service-item[data-id='${serviceId}']`);
+
+        document.getElementById("editServiceId").value = serviceId; 
+        document.getElementById("editServiceDate").value = item.dataset.date;
+        document.getElementById("editServiceMileage").value = item.dataset.mileage;
+        document.getElementById("editServiceDescription").value = item.dataset.description;
+        document.getElementById("editServiceType").value = item.dataset.type;
+
+        modal.style.display = "flex";
+    }
+
+
+    function cancelEditService() {
+        const modal = document.getElementById("editServiceModal");
+        modal.querySelector("form").reset();
         modal.style.display = "none";
     }</script>

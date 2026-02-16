@@ -1,28 +1,20 @@
 ﻿using ClassicCars.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClassicCars.Data
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         public DbSet<Car> Cars { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<ServiceRecord> ServiceRecords { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasMany(u => u.Cars)
-                .WithOne(k => k.User)
-                .HasForeignKey(k => k.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            base.OnModelCreating(modelBuilder); 
         }
-
     }
 }

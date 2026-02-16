@@ -1,58 +1,102 @@
-﻿using System;
+﻿using System.Security.Claims;
 using ClassicCars.Data;
 using ClassicCars.Models;
+using ClassicCars.Services.Interfaces;
+using ClassicCars.ViewModels.Car;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-public class ProfileController : Controller
+namespace ClassicCars.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public ProfileController(ApplicationDbContext context)
+    public class ProfileController : Controller
     {
-        _context = context;
-    }
 
-    public IActionResult Index()
-    {
-        var userId = HttpContext.Session.GetInt32("UserId");
-        if (userId == null)
-            return RedirectToAction("Login", "Login");
+        private readonly IProfileService _carService;
+        private readonly ApplicationDbContext _context;
 
-        var user = _context.Users
-            .Include(u => u.Cars)
-            .FirstOrDefault(u => u.Id == userId);
+        private readonly IProfileService _profileService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        if (user == null) return NotFound();
-
-        return View(user);
-    }
-    [HttpPost]
-    public IActionResult Create(Car car)
-    {
-        var userId = HttpContext.Session.GetInt32("UserId");
-        //Console.WriteLine($"PROFILE PAGE UserId = {userId}");
-        //Console.WriteLine($"SESSION UserId = {userId}");
-        //Console.WriteLine($"BEFORE SET car.UserId = {car.UserId}");
-        if (userId == null) return RedirectToAction("Login", "Login");
-
-        using (var memoryStream = new MemoryStream())
+        public ProfileController(
+            IProfileService profileService,
+            UserManager<ApplicationUser> userManager,
+            ApplicationDbContext context,
+            IProfileService carService)
         {
-            car.Image.CopyTo(memoryStream);
-            car.ImageData = memoryStream.ToArray();
+            _profileService = profileService;
+            _userManager = userManager;
+            _context = context;
+            _carService = carService;
         }
 
-        if (ModelState.IsValid)
+        public async Task<IActionResult> Index()
         {
-            car.UserId = userId.Value;
-            //Console.WriteLine($"AFTER SET car.UserId = {car.UserId}");
-            _context.Cars.Add(car);
-            //Console.WriteLine($"UserId = {car.UserId}");
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            var profile = await _profileService.GetProfileAsync(user.Id);
+            return View(profile);
         }
 
-        return RedirectToAction("Index", "Profile");
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(EditCarViewModel car)
+        {
+            if (!ModelState.IsValid) {
+                var profile = await _profileService.GetProfileAsync(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                return View("Index", profile);
+
+            }
+           
+
+            await _carService.EditCarAsync(car);
+
+            return RedirectToAction("Index");
+
+
+        }
+
+
+        public async Task<IActionResult> Create(CarCreateViewModel car)
+        {
+            var result = await _carService.AddCarAsync(car, User, ModelState.IsValid);
+
+            if (result == "Login")
+                return RedirectToAction("Login", "Account");
+
+            if (result == "Index")
+                return RedirectToAction(nameof(Index));
+
+            return RedirectToAction("Index", "Profile");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            try
+            {
+                var result = await _carService.DeleteCarAsync(id, userId);
+
+                if (!result)
+                {
+                    return NotFound();
+                }
+
+                return RedirectToAction("Index", "Profile");
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Forbid();
+            }
+        }
 
     }
 }

@@ -22,6 +22,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,11 @@
     <None Remove="Views\Register\" />
     <None Remove="Views\Profile\" />
     <None Remove="Views\Collection\" />
+    <None Remove="ViewModels\" />
+    <None Remove="ViewModels\Car\" />
+    <None Remove="Views\Account\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
@@ -38,10 +44,17 @@
     <Folder Include="wwwroot\gallery\" />
     <Folder Include="Views\Profile\" />
     <Folder Include="Views\Collection\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Car\" />
+    <Folder Include="wwwroot\gallery\seed\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\cars.css" />
     <Content Remove="wwwroot\gallery\" />
+    <Content Remove="wwwroot\gallery\seed\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\collection-card.css" />

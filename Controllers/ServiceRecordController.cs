@@ -1,42 +1,72 @@
-﻿using ClassicCars.Data;
+﻿using System.Security.Claims;
 using ClassicCars.Models;
+using ClassicCars.Services.Interfaces;
+using ClassicCars.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
-namespace ClassicCars.Controllers
-{
+
+namespace ClassicCars.Controllers {
+    [Authorize]
     public class ServiceRecordController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IServiceRecordService _serviceRecordService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ServiceRecordController(ApplicationDbContext context)
+        public ServiceRecordController(
+            IServiceRecordService serviceRecordService,
+            UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _serviceRecordService = serviceRecordService;
+            _userManager = userManager;
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(ServiceRecord record)
+        public async Task<IActionResult> Create(ServiceRecordViewModel record)
         {
-            var userId = HttpContext.Session.GetInt32("UserId");
-
-            var car = _context.Cars.FirstOrDefault(c => c.Id == record.CarId);
-
-            if (car == null || car.UserId != userId)
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
                 return Unauthorized();
 
-            if (!ModelState.IsValid)
-                return View(record);
+            var success = await _serviceRecordService
+                .AddServiceRecordAsync(record, user.Id);
 
-            _context.ServiceRecords.Add(record);
-            _context.SaveChanges();
+            if (!success)
+                return Unauthorized();
 
-            return RedirectToAction("Details", "Cars", new { id = record.CarId });
+            return RedirectToAction("Details", "Cars",
+                new { id = record.CarId });
         }
-        //public IActionResult Edit()
-        //{
-           
-        //}
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+                return Unauthorized();
 
+            var record = await _serviceRecordService.GetByIdAsync(id, userId);
+            if (record == null)
+                return NotFound();
+
+            return View(record); 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ServiceRecordViewModel model)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+                return Unauthorized();
+
+            var success = await _serviceRecordService.EditAsync(model, userId);
+
+            if (!success)
+                return NotFound();
+
+            return RedirectToAction("Details", "Cars", new { id = model.CarId });
+        }
     }
+
+
 }

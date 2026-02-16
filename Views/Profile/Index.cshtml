@@ -1,5 +1,4 @@
-﻿
-<link rel="stylesheet" href="~/css/profile.css" />
+﻿<link rel="stylesheet" href="~/css/profile.css" />
 <div class="container">
 
     <aside class="profile">
@@ -7,38 +6,10 @@
         <h2>@Model.FirstName @Model.LastName</h2>
         <p class="member">Classic cars member</p>
         <hr>
-        <a asp-controller="Register"
-           asp-action="Edit"
-           class="edit-btn">
-            Edit Profile
-        </a>
     </aside>
 
     <main class="content">
-        <header class="nav-bar">
-            <div class="logo">R</div>
-
-            <nav>
-                <a asp-controller="Home" asp-action="Index">Home</a>
-                <a asp-controller="Collection" asp-action="Index">Collections</a>
-                @if (Context.Session.GetInt32("UserId") != null)
-                {
-                    <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;">
-                        <button type="submit" class="logout-btn">Log Out</button>
-                    </form>
-                }
-                else
-                {
-                    <form asp-controller="Register" asp-action="Register" method="get" style="display:inline;">
-                        <button type="submit" class="signin-btn">Sign In</button>
-                    </form>
-
-                    <form asp-controller="Login" asp-action="Login" method="get" style="display:inline;">
-                        <button type="submit" class="login-btn">Log In</button>
-                    </form>
-                }
-            </nav>
-        </header>
+        @await Html.PartialAsync("_NavBar")
 
 
         <section class="cars">
@@ -67,45 +38,87 @@
                             <button type="button" class="cancel-btn" onclick="cancelAddCar()">Cancel</button>
                         </form>
                     </div>
-
                     <div class="modal-right">
-                        <div class="car-preview">
-                            🚗
-                        </div>
+                        <div class="car-preview">🚗</div>
                         <span class="preview-text">Classic cars</span>
                     </div>
                 </div>
             </div>
-            @{
-                int i = 0;
-            }
-        <div class="car-list">
-            @foreach (var car in Model.Cars)
-            {
-                var extraClass = i >= 3 ? "extra" : "";
 
-                var base64 = Convert.ToBase64String(car.ImageData);
-                var imgSrc = $"data:image/jpeg;base64,{base64}";
+            <div id="editCarModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-left">
+                        <form asp-controller="Profile" asp-action="Edit" method="post" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="Id" id="editId" />
+                            <input type="text" name="Brand" id="editBrand" placeholder="Brand" required />
+                            <input type="text" name="Model" id="editModel" placeholder="Model" required />
+                            <input type="number" name="Year" id="editYear" min="1900" max="2100" required />
+                            <input type="text" name="EngineType" id="editEngineType" placeholder="Engine Type" />
+                            <input type="number" name="Horsepower" id="editHorsepower" placeholder="Horsepower" />
+                            <input type="text" name="Condition" id="editCondition" placeholder="Condition" />
+                            <input type="number" step="0.01" name="Price" id="editPrice" required />
+                            <input type="file" name="Image" />
+                            <textarea name="Description" id="editDescription"></textarea>
+                            <input type="text" name="Transmission" id="editTransmission" placeholder="Transmission" />
 
-                <a asp-controller="Cars"
-                   asp-action="Details"
-                   asp-route-id="@car.Id"
-                   class="car-card-link @extraClass"
-                   style="text-decoration:none; color:inherit;">
-
-                    <div class="car-card">
-                        <div class="car-image" style="background-image:url('@imgSrc')"></div>
-                        <p><strong>@car.Model</strong> <span class="price">@car.Price</span></p>
-                        <p class="desc">@car.Description</p>
+                            <button type="submit" class="submit-btn">SAVE CHANGES</button>
+                            <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+                        </form>
                     </div>
-                </a>
+                    <div class="modal-right">
+                        <div class="car-preview">🚗</div>
+                        <span class="preview-text">Edit car</span>
+                    </div>
+                </div>
+            </div>
 
-                i++;
-            }
+            @{ int i = 0; }
+            <div class="car-list">
+                @foreach (var car in Model.Cars)
+                {
+                    var extraClass = i >= 3 ? "extra" : "";
+                    var base64 = Convert.ToBase64String(car.ImageData);
+                    var imgSrc = $"data:image/jpeg;base64,{base64}";
 
-        </div>
+                    <div class="car-card-link @extraClass">
+                        <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id" style="text-decoration:none; color:inherit;">
+                            <div class="car-card">
+                                <div class="car-image" style="background-image:url('@imgSrc')"></div>
+                                <p><strong>@car.Model</strong> <span class="price">@car.Price</span></p>
+                                <p class="desc">@car.Description</p>
+                            </div>
+                        </a>
 
+                        <div class="car-actions">
+                            <button type="button"
+                                    class="edit-btn"
+                                    onclick="openEditModal(
+                                        @car.Id,
+                                        '@car.Brand',
+                                        '@car.Model',
+                                        '@car.Year',
+                                        '@car.EngineType',
+                                        '@car.Horsepower',
+                                        '@car.Condition',
+                                        '@car.Price',
+                                        '@car.Description',
+                                        '@car.Transmission')">
+                                Edit
+                            </button>
 
+                            <form asp-controller="Profile" asp-action="Delete" method="post" style="display:inline;"
+                                  onsubmit="return confirm('Are you sure you want to delete this car?');">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@car.Id" />
+                                <button type="submit" class="edit-btn">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    i++;
+                }
+            </div>
 
             <button class="more-btn" onclick="toggleCars()">More</button>
         </section>
@@ -117,6 +130,7 @@
             <div class="detail"><span class="label">First Name</span><span class="value">@Model.FirstName</span></div>
             <div class="detail"><span class="label">Last Name</span><span class="value">@Model.LastName</span></div>
         </section>
+        @await Html.PartialAsync("_Footer")
     </main>
 </div>
 
@@ -130,7 +144,6 @@
         expanded = !expanded;
     }
 
-
     function toggleAddCarForm() {
         const modal = document.getElementById("addCarModal");
         modal.style.display = modal.style.display === "flex" ? "none" : "flex";
@@ -139,8 +152,26 @@
     function cancelAddCar() {
         const modal = document.getElementById("addCarModal");
         const form = modal.querySelector("form");
-
         form.reset();
         modal.style.display = "none";
-    }</script>
+    }
 
+    function openEditModal(id, brand, model, year, engineType, horsepower, condition, price, description, transmission) {
+        document.getElementById("editId").value = id;
+        document.getElementById("editBrand").value = brand;
+        document.getElementById("editModel").value = model;
+        document.getElementById("editYear").value = year;
+        document.getElementById("editEngineType").value = engineType;
+        document.getElementById("editHorsepower").value = horsepower;
+        document.getElementById("editCondition").value = condition;
+        document.getElementById("editPrice").value = price;
+        document.getElementById("editDescription").value = description;
+        document.getElementById("editTransmission").value = transmission;
+
+        document.getElementById("editCarModal").style.display = "flex";
+    }
+
+    function closeEditModal() {
+        const modal = document.getElementById("editCarModal");
+        modal.style.display = "none";
+    }</script>

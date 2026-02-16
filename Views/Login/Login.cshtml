@@ -1,4 +1,4 @@
-﻿@model Login
+﻿@model ClassicCars.ViewModels.LoginViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -22,7 +22,7 @@
                 @Html.ValidationSummary()
             </div>
         }
-    <form asp-action="Login" method="post">
+        <form asp-action="Login" method="post">
             <div class="input-group">
                 <input asp-for="UsernameOrEmail"
                        type="text"
@@ -30,20 +30,20 @@
                        class="form-control"
                        required />
             </div>
-        <div class="input-group">
-            <input asp-for="Password"
-                   type="password"
-                   placeholder="Password"
-                   class="form-control"
-                   required />
-        </div>
+            <div class="input-group">
+                <input asp-for="Password"
+                       type="password"
+                       placeholder="Password"
+                       class="form-control"
+                       required />
+            </div>
 
-        <button type="submit">Log In</button>
-    </form>
+            <button type="submit">Log In</button>
+        </form>
 
         <p class="login">
             New here?
-            <a asp-action="Register" asp-controller="Register">Create account</a>
+            <a asp-action="Register" asp-controller="Account">Create account</a>
         </p>
     </div>
 </div>
