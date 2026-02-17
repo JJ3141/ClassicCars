@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.ItemProperties.Web.ClassicCars.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument=".gitignore">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../ClassicCars.GCommon/EntityValidations.cs">
     <Files>
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
       <File FileName="Controllers/ProfileController.cs" />
@@ -20,18 +20,29 @@
       <File FileName="Views/Account/Login.cshtml" />
       <File FileName="Controllers/CollectionController.cs" />
       <File FileName="Controllers/HomeController.cs" />
-      <File FileName="appsettings.Development.json" />
-      <File FileName="appsettings.json" />
       <File FileName="wwwroot/css/car.css" />
       <File FileName="Controllers/ServiceRecordController.cs" />
       <File FileName="Views/Shared/_Layout.cshtml" />
       <File FileName="Views/Shared/_Layout.cshtml.css" />
-      <File FileName="../ClassicCars.GCommon/EntityValidations.cs" />
-      <File FileName=".gitignore" Line="4" Column="29" />
+      <File FileName="../ClassicCars.GCommon/EntityValidations.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="ClassicCars">
+            <Node name="Web" expanded="True">
+              <Node name="ClassicCars.Web">
+                <Node name="Areas" expanded="True">
+                  <Node name="Identity" expanded="True">
+                    <Node name="Pages" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="wwwroot" expanded="True" selected="True" />
+              </Node>
+            </Node>
+            <Node name="ClassicCars.GCommon" expanded="True" />
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
