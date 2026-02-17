@@ -173,7 +173,6 @@ Key settings in `appsettings.json`:
 }
 ```
 
-> ⚠️ **Never commit sensitive data** (passwords, API keys) to source control. Use `appsettings.Development.json` or environment variables for local secrets.
 
 ---
 
