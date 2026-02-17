@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj": {}
+    "/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars/ClassicCars.csproj": {}
   },
   "projects": {
-    "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj": {
+    "/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars/ClassicCars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj",
+        "projectUniqueName": "/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars/ClassicCars.csproj",
         "projectName": "ClassicCars",
-        "projectPath": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/ClassicCars.csproj",
+        "projectPath": "/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars/ClassicCars.csproj",
         "packagesPath": "/Users/macbookpro/.nuget/packages/",
-        "outputPath": "/Users/macbookpro/Desktop/Classic Cars2/Untitled/obj/",
+        "outputPath": "/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macbookpro/.nuget/NuGet/NuGet.Config"

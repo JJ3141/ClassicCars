@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars", "ClassicCars.csproj", "{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.Web", "ClassicCars.Web.csproj", "{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0837A191-F4F2-4D04-855C-8F9ECA2FF12E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B3A21136-54BF-4AE5-BC0D-068C09120464}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F6D70940-4401-49AF-BE29-3A9E2C8A6BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.Data", "..\ClassicCars.Data\ClassicCars.Data.csproj", "{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.DataModels", "..\ClassicCars.DataModels\ClassicCars.DataModels.csproj", "{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.Services.Core", "..\ClassicCars.Services.Core\ClassicCars.Services.Core.csproj", "{E9CE0346-2309-40D2-B87D-EA872288C263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.ViewModels", "..\ClassicCars.ViewModels\ClassicCars.ViewModels.csproj", "{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.GCommon", "..\ClassicCars.GCommon\ClassicCars.GCommon.csproj", "{4B9576F3-65F0-440B-B8ED-225202E1D7B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,11 +31,38 @@ Global
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CE0346-2309-40D2-B87D-EA872288C263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CE0346-2309-40D2-B87D-EA872288C263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CE0346-2309-40D2-B87D-EA872288C263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CE0346-2309-40D2-B87D-EA872288C263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B9576F3-65F0-440B-B8ED-225202E1D7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B9576F3-65F0-440B-B8ED-225202E1D7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B9576F3-65F0-440B-B8ED-225202E1D7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B9576F3-65F0-440B-B8ED-225202E1D7B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7216D90-F8AD-4370-B737-2C61E9CCBA10}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6} = {F6D70940-4401-49AF-BE29-3A9E2C8A6BE7}
+		{0FBD43F3-4058-42E0-B9F7-A02E7A014C6F} = {0837A191-F4F2-4D04-855C-8F9ECA2FF12E}
+		{FCD4F666-546C-4DF4-94DE-1CA3C0FD9159} = {0837A191-F4F2-4D04-855C-8F9ECA2FF12E}
+		{E9CE0346-2309-40D2-B87D-EA872288C263} = {B3A21136-54BF-4AE5-BC0D-068C09120464}
+		{1A060399-C83F-4F4B-BA9F-8F3CBCA6AB8B} = {F6D70940-4401-49AF-BE29-3A9E2C8A6BE7}
 	EndGlobalSection
 EndGlobal

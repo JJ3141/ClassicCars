@@ -1,76 +1,74 @@
 ﻿<Properties StartupConfiguration="{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Profile/Index.cshtml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Web.ClassicCars.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../ClassicCars.Services.Core/Services/Interfaces/IProfileService.cs">
     <Files>
-      <File FileName="Data/ApplicationDbContext.cs" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="19" Column="2" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
-      <File FileName="Program.cs" />
-      <File FileName="EntityValidations.cs" />
-      <File FileName="ViewModels/ServiceRecordViewModel.cs" />
-      <File FileName="Models/Car.cs" />
-      <File FileName="Controllers/ProfileController.cs" Line="61" Column="1" />
+      <File FileName="ViewModels/ServiceRecordViewModel.cs" Line="1" Column="19" />
+      <File FileName="Models/Car.cs" Line="40" Column="16" />
+      <File FileName="Controllers/ProfileController.cs" Line="50" Column="1" />
       <File FileName="Views/Login/Login.cshtml" />
       <File FileName="Views/Register/Register.cshtml" />
       <File FileName="Controllers/CarController.cs" />
-      <File FileName="Models/ApplicationUser.cs" />
+      <File FileName="Models/ApplicationUser.cs" Line="7" Column="6" />
       <File FileName="Migrations/20260214204809_FixUserTypeIdAndAddIdentity.cs" />
       <File FileName="Migrations/ApplicationDbContextModelSnapshot.cs" />
-      <File FileName="Models/ServiceRecord.cs" />
+      <File FileName="Models/ServiceRecord.cs" Line="3" Column="1" />
       <File FileName="Migrations/20260214204809_FixUserTypeIdAndAddIdentity.Designer.cs" />
       <File FileName="Views/Home/Index.cshtml" />
       <File FileName="Views/Cars/Details.cshtml" />
       <File FileName="Views/Collection/Index.cshtml" />
-      <File FileName="Views/Profile/Index.cshtml" Line="70" Column="1" />
-      <File FileName="Models/ServiceType.cs" />
+      <File FileName="Views/Profile/Index.cshtml" Line="44" Column="27" />
+      <File FileName="Models/ServiceType.cs" Line="1" Column="1" />
       <File FileName="Views/Account/Register.cshtml" />
       <File FileName="Controllers/AccountController.cs" />
       <File FileName="ViewModels/RegisterViewModel.cs" />
       <File FileName="wwwroot/css/register.css" />
-      <File FileName="ViewModels/ProfileViewModel.cs" />
-      <File FileName="ViewModels/Car/CarDetailsViewModel.cs" />
-      <File FileName="ViewModels/LoginViewModel.cs" />
-      <File FileName="ViewModels/Car/CarCreateViewModel.cs" />
-      <File FileName="ViewModels/Car/CarCardViewModel.cs" />
-      <File FileName="Models/Register.cs" />
-      <File FileName="ViewModels/Car/CarCollectionViewModel.cs" />
-      <File FileName="Models/Login.cs" />
-      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="ViewModels/ProfileViewModel.cs" Line="17" Column="19" />
+      <File FileName="ViewModels/Car/CarDetailsViewModel.cs" Line="1" Column="1" />
+      <File FileName="ViewModels/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="ViewModels/Car/CarCreateViewModel.cs" Line="14" Column="20" />
+      <File FileName="ViewModels/Car/CarCardViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/Register.cs" Line="1" Column="1" />
+      <File FileName="ViewModels/Car/CarCollectionViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/Login.cs" Line="1" Column="1" />
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
       <File FileName="Views/Account/Login.cshtml" />
       <File FileName="Controllers/CollectionController.cs" />
       <File FileName="Controllers/HomeController.cs" />
-      <File FileName="Services/Interfaces/IAccountService.cs" />
-      <File FileName="Services/Interfaces/ICarService.cs" />
-      <File FileName="Services/Interfaces/ICollectionService.cs" />
-      <File FileName="Services/Interfaces/IProfileService.cs" />
-      <File FileName="Services/Interfaces/IServiceRecordService.cs" />
-      <File FileName="Services/AccountService.cs" />
-      <File FileName="Services/CarService.cs" />
-      <File FileName="Services/CollectionService.cs" />
-      <File FileName="Services/ProfileService.cs" />
-      <File FileName="Services/ServiceRecordService.cs" />
+      <File FileName="Services/Interfaces/IAccountService.cs" Line="1" Column="1" />
+      <File FileName="Services/Interfaces/ICarService.cs" Line="1" Column="1" />
+      <File FileName="Services/Interfaces/ICollectionService.cs" Line="1" Column="1" />
+      <File FileName="Services/Interfaces/IProfileService.cs" Line="1" Column="1" />
+      <File FileName="Services/Interfaces/IServiceRecordService.cs" Line="1" Column="1" />
+      <File FileName="Services/AccountService.cs" Line="1" Column="1" />
+      <File FileName="Services/CarService.cs" Line="11" Column="6" />
+      <File FileName="Services/CollectionService.cs" Line="1" Column="1" />
+      <File FileName="Services/ProfileService.cs" Line="147" Column="19" />
+      <File FileName="Services/ServiceRecordService.cs" Line="1" Column="1" />
       <File FileName="appsettings.Development.json" />
       <File FileName="appsettings.json" />
       <File FileName="wwwroot/css/car.css" />
-      <File FileName="ViewModels/Car/EditCarViewModel.cs" />
+      <File FileName="ViewModels/Car/EditCarViewModel.cs" Line="49" Column="7" />
       <File FileName="Controllers/ServiceRecordController.cs" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="21" Column="138" />
+      <File FileName="Views/Shared/_Layout.cshtml.css" Line="1" Column="1" />
+      <File FileName="../ClassicCars.GCommon/EntityValidations.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ClassicCars">
-            <Node name="ClassicCars">
-              <Node name="Controllers" expanded="True" />
-            </Node>
+          <Node name="ClassicCars" expanded="True">
+            <Node name="ClassicCars.GCommon" expanded="True" />
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ClassicCars PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

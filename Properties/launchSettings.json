@@ -34,10 +34,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ClassicCars": {
+    "ClassicCars.Web": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:11735;http://localhost:26078",
+      "applicationUrl": "https://localhost:5731;http://localhost:27093",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
