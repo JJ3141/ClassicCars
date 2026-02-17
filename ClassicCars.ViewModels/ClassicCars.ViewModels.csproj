@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassicCars.GCommon\ClassicCars.GCommon.csproj" />
+    <ProjectReference Include="..\ClassicCars.DataModels\ClassicCars.DataModels.csproj" />
+    <ProjectReference Include="..\ClassicCars.Data\ClassicCars.Data.csproj" />
+  </ItemGroup>
+</Project>

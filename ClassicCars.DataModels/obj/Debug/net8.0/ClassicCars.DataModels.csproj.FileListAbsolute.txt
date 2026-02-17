@@ -1,0 +1,15 @@
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.csproj.AssemblyReference.cache
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.AssemblyInfoInputs.cache
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.AssemblyInfo.cs
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.csproj.CoreCompileInputs.cache
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/bin/Debug/net8.0/ClassicCars.DataModels.deps.json
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/bin/Debug/net8.0/ClassicCars.DataModels.dll
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/bin/Debug/net8.0/ClassicCars.DataModels.pdb
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/bin/Debug/net8.0/ClassicCars.GCommon.dll
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/bin/Debug/net8.0/ClassicCars.GCommon.pdb
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicC.8F486424.Up2Date
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.dll
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/refint/ClassicCars.DataModels.dll
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ClassicCars.DataModels.pdb
+/Users/macbookpro/Desktop/untitled folder 5/Untitled/ClassicCars.DataModels/obj/Debug/net8.0/ref/ClassicCars.DataModels.dll

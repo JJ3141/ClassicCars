@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Web.ClassicCars.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Web.ClassicCars.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../ClassicCars.GCommon/EntityValidations.cs">
     <Files>
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
@@ -29,7 +30,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ClassicCars">
+          <Node name="ClassicCars" selected="True">
             <Node name="Web" expanded="True">
               <Node name="ClassicCars.Web">
                 <Node name="Areas" expanded="True">
@@ -37,7 +38,6 @@
                     <Node name="Pages" expanded="True" />
                   </Node>
                 </Node>
-                <Node name="wwwroot" expanded="True" selected="True" />
               </Node>
             </Node>
             <Node name="ClassicCars.GCommon" expanded="True" />
@@ -46,7 +46,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
