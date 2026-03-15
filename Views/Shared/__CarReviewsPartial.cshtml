@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ClassicCars.ViewModels.CarReviewViewModel>
+
+<div class="reviews">
+    <h3>Reviews</h3>
+    <div class="review-list">
+        @foreach (var review in Model)
+        {
+            <div class="review-card">
+                <p><strong>@review.UserName</strong> rated: @review.Rating/5</p>
+                <p>@review.Comment</p>
+                <p class="date">@review.CreatedOn.ToString("dd MMM yyyy")</p>
+            </div>
+        }
+    </div>
+</div>

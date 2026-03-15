@@ -20,6 +20,7 @@ builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IServiceRecordService, ServiceRecordService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICarReviewService, CarReviewService>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {

@@ -1,0 +1,20 @@
+﻿body.reviews {
+    margin-top: 2rem;
+}
+
+.review-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+    .review-card p {
+        margin: 0.2rem 0;
+    }
+
+    .review-card .date {
+        font-size: 0.8rem;
+        color: #666;
+    }

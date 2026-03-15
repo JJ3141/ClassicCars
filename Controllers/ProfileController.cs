@@ -46,26 +46,52 @@ namespace ClassicCars.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(EditCarViewModel car)
+        public async Task<IActionResult> Edit([Bind(Prefix = "EditCar")] EditCarViewModel car)
         {
-            if (!ModelState.IsValid) {
+            if (!ModelState.IsValid)
+            {
                 var profile = await _profileService.GetProfileAsync(User.FindFirstValue(ClaimTypes.NameIdentifier));
-                return View("Index", profile);
+                if (profile == null)
+                    return RedirectToAction("Login", "Account");
 
+                // preserve posted edit model so values and validation messages are shown
+                profile.EditCar = car;
+                return View("Index", profile);
             }
-           
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+                return RedirectToAction("Login", "Account");
+
+            var owned = await _profileService.GetCarByIdAsync(car.Id, userId);
+            if (owned == null)
+            {
+                // not found or not owned by current user
+                return NotFound();
+            }
 
             await _carService.EditCarAsync(car);
 
             return RedirectToAction("Index");
-
-
         }
 
 
-        public async Task<IActionResult> Create(CarCreateViewModel car)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind(Prefix = "NewCar")] CarCreateViewModel car)
         {
-            var result = await _carService.AddCarAsync(car, User, ModelState.IsValid);
+       
+            if (!ModelState.IsValid)
+            {
+                var profile = await _profileService.GetProfileAsync(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                if (profile == null)
+                    return RedirectToAction("Login", "Account");
+
+                profile.NewCar = car;
+                return View("Index", profile);
+            }
+
+            var result = await _carService.AddCarAsync(car, User, true);
 
             if (result == "Login")
                 return RedirectToAction("Login", "Account");

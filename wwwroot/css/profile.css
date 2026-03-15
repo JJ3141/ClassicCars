@@ -260,6 +260,16 @@ hr {
         outline: none;
     }
 
+.text-danger {
+    color: #c62828;
+    font-size: 0.9em;
+}
+
+input.input-validation-error, textarea.input-validation-error {
+    border: 2px solid #c62828;
+    background: #ffdede;
+}
+
     .modal-left textarea {
         resize: none;
         height: 80px;

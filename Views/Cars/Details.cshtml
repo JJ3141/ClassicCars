@@ -20,6 +20,55 @@
             <div class="image-box" style="background-image:url('@imgSrc')"></div>
         </div>
 
+    <div class="reviews">
+        <strong>Reviews:</strong>
+
+        @if (Model.Reviews != null && Model.Reviews.Any())
+        {
+            <ul class="review-list">
+                @foreach (var r in Model.Reviews)
+                {
+                    <li class="review-item">
+                        <div><strong>@r.UserName</strong> <span class="rating">@r.Rating/5</span></div>
+                        <div class="comment">@r.Comment</div>
+                        <div class="date">@r.CreatedOn.ToString("yyyy-MM-dd")</div>
+                        @if (UserManager.GetUserAsync(User).Result?.Id == UserManager.GetUserAsync(User).Result?.Id)
+                        {
+                            <!-- no-op: placeholder -->
+                        }
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No reviews yet.</p>
+        }
+
+        <div class="add-review">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <form asp-controller="CarReview" asp-action="Add" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="carId" value="@Model.Id" />
+                    <label>Rating</label>
+                    <select name="Rating">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                    <textarea name="Comment" placeholder="Write your review" required></textarea>
+                    <button type="submit">Add review</button>
+                </form>
+            }
+            else
+            {
+                <p><a asp-controller="Account" asp-action="Login">Sign in</a> to add a review.</p>
+            }
+        </div>
+    </div>
+
         <div class="right">
             <div class="info-box">
                 <p><strong>Brand:</strong> @Model.Brand</p>
@@ -169,3 +218,6 @@
         modal.querySelector("form").reset();
         modal.style.display = "none";
     }</script>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }

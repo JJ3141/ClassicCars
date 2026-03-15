@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/ClassicCars.Web.props" />
-</Project>

@@ -38,21 +38,8 @@ namespace ClassicCars.Controllers {
             return RedirectToAction("Details", "Cars",
                 new { id = record.CarId });
         }
-        [HttpGet]
-        public async Task<IActionResult> Edit(int id)
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null)
-                return Unauthorized();
-
-            var record = await _serviceRecordService.GetByIdAsync(id, userId);
-            if (record == null)
-                return NotFound();
-
-            return View(record); 
-        }
-
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ServiceRecordViewModel model)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);

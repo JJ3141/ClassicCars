@@ -1,4 +1,6 @@
-﻿<link rel="stylesheet" href="~/css/profile.css" />
+﻿@model ClassicCars.ViewModels.ProfileViewModel
+
+<link rel="stylesheet" href="~/css/profile.css" />
 <div class="container">
 
     <aside class="profile">
@@ -23,16 +25,37 @@
                     <div class="modal-left">
                         <form asp-controller="Profile" asp-action="Create" method="post" enctype="multipart/form-data">
                             @Html.AntiForgeryToken()
-                            <input type="text" name="Brand" placeholder="Brand" required />
-                            <input type="text" name="Model" placeholder="Model" required />
-                            <input type="number" name="Year" placeholder="Year (1900-2100)" min="1900" max="2100" required />
-                            <input type="text" name="EngineType" placeholder="Engine Type" />
-                            <input type="number" name="Horsepower" placeholder="Horsepower" />
-                            <input type="text" name="Condition" placeholder="Condition" />
-                            <input type="number" step="0.01" name="Price" placeholder="Price" required />
-                            <input type="file" name="Image" placeholder="Image" required />
-                            <textarea name="Description" placeholder="Description"></textarea>
-                            <input type="text" name="Transmission" placeholder="Transmission" />
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <input asp-for="NewCar.Brand" placeholder="Brand" />
+                            <span asp-validation-for="NewCar.Brand" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Model" placeholder="Model" />
+                            <span asp-validation-for="NewCar.Model" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Year" placeholder="Year (1900-2100)" min="1900" max="2100" />
+                            <span asp-validation-for="NewCar.Year" class="text-danger"></span>
+
+                            <input asp-for="NewCar.EngineType" placeholder="Engine Type" />
+                            <span asp-validation-for="NewCar.EngineType" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Horsepower" placeholder="Horsepower" />
+                            <span asp-validation-for="NewCar.Horsepower" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Condition" placeholder="Condition" />
+                            <span asp-validation-for="NewCar.Condition" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Price" step="0.01" placeholder="Price" />
+                            <span asp-validation-for="NewCar.Price" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Image" type="file" />
+                            <span asp-validation-for="NewCar.Image" class="text-danger"></span>
+
+                            <textarea asp-for="NewCar.Description" placeholder="Description"></textarea>
+                            <span asp-validation-for="NewCar.Description" class="text-danger"></span>
+
+                            <input asp-for="NewCar.Transmission" placeholder="Transmission" />
+                            <span asp-validation-for="NewCar.Transmission" class="text-danger"></span>
 
                             <button type="submit" class="submit-btn">ADD CAR</button>
                             <button type="button" class="cancel-btn" onclick="cancelAddCar()">Cancel</button>
@@ -50,17 +73,39 @@
                     <div class="modal-left">
                         <form asp-controller="Profile" asp-action="Edit" method="post" enctype="multipart/form-data">
                             @Html.AntiForgeryToken()
-                            <input type="hidden" name="Id" id="editId" />
-                            <input type="text" name="Brand" id="editBrand" placeholder="Brand" required />
-                            <input type="text" name="Model" id="editModel" placeholder="Model" required />
-                            <input type="number" name="Year" id="editYear" min="1900" max="2100" required />
-                            <input type="text" name="EngineType" id="editEngineType" placeholder="Engine Type" />
-                            <input type="number" name="Horsepower" id="editHorsepower" placeholder="Horsepower" />
-                            <input type="text" name="Condition" id="editCondition" placeholder="Condition" />
-                            <input type="number" step="0.01" name="Price" id="editPrice" required />
-                            <input type="file" name="Image" />
-                            <textarea name="Description" id="editDescription"></textarea>
-                            <input type="text" name="Transmission" id="editTransmission" placeholder="Transmission" />
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <input asp-for="EditCar.Id" id="editId" type="hidden" />
+
+                            <input asp-for="EditCar.Brand" id="editBrand" placeholder="Brand" />
+                            <span asp-validation-for="EditCar.Brand" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Model" id="editModel" placeholder="Model" />
+                            <span asp-validation-for="EditCar.Model" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Year" id="editYear" min="1900" max="2100" />
+                            <span asp-validation-for="EditCar.Year" class="text-danger"></span>
+
+                            <input asp-for="EditCar.EngineType" id="editEngineType" placeholder="Engine Type" />
+                            <span asp-validation-for="EditCar.EngineType" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Horsepower" id="editHorsepower" placeholder="Horsepower" />
+                            <span asp-validation-for="EditCar.Horsepower" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Condition" id="editCondition" placeholder="Condition" />
+                            <span asp-validation-for="EditCar.Condition" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Price" id="editPrice" step="0.01" />
+                            <span asp-validation-for="EditCar.Price" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Image" type="file" />
+                            <span asp-validation-for="EditCar.Image" class="text-danger"></span>
+
+                            <textarea asp-for="EditCar.Description" id="editDescription"></textarea>
+                            <span asp-validation-for="EditCar.Description" class="text-danger"></span>
+
+                            <input asp-for="EditCar.Transmission" id="editTransmission" placeholder="Transmission" />
+                            <span asp-validation-for="EditCar.Transmission" class="text-danger"></span>
 
                             <button type="submit" class="submit-btn">SAVE CHANGES</button>
                             <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
@@ -93,17 +138,17 @@
                         <div class="car-actions">
                             <button type="button"
                                     class="edit-btn"
-                                    onclick="openEditModal(
-                                        @car.Id,
-                                        '@car.Brand',
-                                        '@car.Model',
-                                        '@car.Year',
-                                        '@car.EngineType',
-                                        '@car.Horsepower',
-                                        '@car.Condition',
-                                        '@car.Price',
-                                        '@car.Description',
-                                        '@car.Transmission')">
+                                    data-id="@car.Id"
+                                    data-brand="@car.Brand"
+                                    data-model="@car.Model"
+                                    data-year="@car.Year"
+                                    data-enginetype="@car.EngineType"
+                                    data-horsepower="@car.Horsepower"
+                                    data-condition="@car.Condition"
+                                    data-price="@car.Price"
+                                    data-description="@car.Description"
+                                    data-transmission="@car.Transmission"
+                                    onclick="openEditModalFromButton(this)">
                                 Edit
                             </button>
 
@@ -167,11 +212,48 @@
         document.getElementById("editPrice").value = price;
         document.getElementById("editDescription").value = description;
         document.getElementById("editTransmission").value = transmission;
-
         document.getElementById("editCarModal").style.display = "flex";
+    }
+
+    function openEditModalFromButton(btn) {
+        const dataset = btn.dataset;
+        document.getElementById("editId").value = dataset.id || '';
+        document.getElementById("editBrand").value = dataset.brand || '';
+        document.getElementById("editModel").value = dataset.model || '';
+        document.getElementById("editYear").value = dataset.year || '';
+        document.getElementById("editEngineType").value = dataset.enginetype || '';
+        document.getElementById("editHorsepower").value = dataset.horsepower || '';
+        document.getElementById("editCondition").value = dataset.condition || '';
+        document.getElementById("editPrice").value = dataset.price || '';
+        document.getElementById("editDescription").value = dataset.description || '';
+        document.getElementById("editTransmission").value = dataset.transmission || '';
+        document.getElementById("editCarModal").style.display = 'flex';
     }
 
     function closeEditModal() {
         const modal = document.getElementById("editCarModal");
         modal.style.display = "none";
     }</script>
+@if (Model.EditCar != null)
+{
+    <script>
+        // populate and open edit modal when server returned validation errors
+        (function(){
+            const e = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.EditCar));
+            document.getElementById("editId").value = e.Id;
+            document.getElementById("editBrand").value = e.Brand || '';
+            document.getElementById("editModel").value = e.Model || '';
+            document.getElementById("editYear").value = e.Year || '';
+            document.getElementById("editEngineType").value = e.EngineType || '';
+            document.getElementById("editHorsepower").value = e.Horsepower || '';
+            document.getElementById("editCondition").value = e.Condition || '';
+            document.getElementById("editPrice").value = e.Price || '';
+            document.getElementById("editDescription").value = e.Description || '';
+            document.getElementById("editTransmission").value = e.Transmission || '';
+            document.getElementById("editCarModal").style.display = 'flex';
+        })();
+    </script>
+}
+    @section Scripts{
+        <partial name="_ValidationScriptsPartial" />
+    }
