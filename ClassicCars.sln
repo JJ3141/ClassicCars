@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F6D70940-4401-49AF-BE29-3A9E2C8A6BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicCars.Data", "..\ClassicCars.Data\ClassicCars.Data.csproj", "{11A8916E-DA0A-458C-96FA-960A3D187ED9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,16 +21,9 @@ Global
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0359BF46-C4AC-4082-B376-EE87FDD3C2F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11A8916E-DA0A-458C-96FA-960A3D187ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11A8916E-DA0A-458C-96FA-960A3D187ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11A8916E-DA0A-458C-96FA-960A3D187ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11A8916E-DA0A-458C-96FA-960A3D187ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{11A8916E-DA0A-458C-96FA-960A3D187ED9} = {0837A191-F4F2-4D04-855C-8F9ECA2FF12E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7216D90-F8AD-4370-B737-2C61E9CCBA10}

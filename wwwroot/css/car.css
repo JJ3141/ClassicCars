@@ -393,7 +393,7 @@ nav a {
 }
 
     .review-item .rating {
-        color: #ff9800; /* златен цвят за рейтинг */
+        color: #ff9800; 
         font-weight: 600;
         margin-left: 10px;
     }
@@ -450,3 +450,71 @@ nav a {
         margin-top: 10px;
         font-size: 14px;
     }
+.reviews {
+    background: #fff;
+    margin: 30px 60px;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+    .reviews strong {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+.review-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-item {
+    background: #F3ECD7;
+    padding: 16px 20px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-user {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.review-rating {
+    font-size: 18px;
+}
+
+.star {
+    color: #bbb;
+}
+
+    .star.filled {
+        color: #ff9800;
+    }
+
+.review-comment {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.review-date {
+    font-size: 13px;
+    color: #666;
+    text-align: right;
+}
+
+.no-reviews {
+    color: #777;
+    margin-bottom: 10px;
+}

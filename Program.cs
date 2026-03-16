@@ -89,9 +89,9 @@ static async Task SeedDataAsync(WebApplication app)
         {
             var car1 = new Car
             {
-                Brand = "BMW",
-                Model = "X5",
-                Year = 2022,
+                Brand = "Chevrolet",
+                Model = "Impala",
+                Year = 1967,
                 Horsepower = 300,
                 Price = 50000,
                 UserId = user1.Id,
@@ -100,9 +100,9 @@ static async Task SeedDataAsync(WebApplication app)
 
             var car2 = new Car
             {
-                Brand = "Audi",
-                Model = "A4",
-                Year = 2020,
+                Brand = "Chevrolet",
+                Model = " Camaro ",
+                Year = 2010,
                 Horsepower = 220,
                 Price = 35000,
                 UserId = user2.Id,

@@ -35,6 +35,15 @@ namespace ClassicCars.Controllers
 
             return View(car);
         }
+        public async Task<IActionResult> ReviewDetails(int id)
+        {
+            var car = await _carService.GetDetailsAsync(id);
+
+            if (car == null)
+                return NotFound();
+
+            return View(car);
+        }
 
 
         public async Task<IActionResult> Delete(int id)

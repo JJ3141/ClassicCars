@@ -54,7 +54,6 @@ namespace ClassicCars.Controllers
                 if (profile == null)
                     return RedirectToAction("Login", "Account");
 
-                // preserve posted edit model so values and validation messages are shown
                 profile.EditCar = car;
                 return View("Index", profile);
             }
@@ -65,8 +64,8 @@ namespace ClassicCars.Controllers
 
             var owned = await _profileService.GetCarByIdAsync(car.Id, userId);
             if (owned == null)
-            {
-                // not found or not owned by current user
+            { 
+           
                 return NotFound();
             }
 

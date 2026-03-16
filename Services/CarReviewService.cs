@@ -17,7 +17,6 @@ namespace ClassicCars.Services
 
         public async Task<IEnumerable<CarReviewViewModel>> GetReviewsForCarAsync(int carId)
         {
-            // If DbSet not configured, return empty list
             if (_context.Set<CarReview>() == null)
                 return Enumerable.Empty<CarReviewViewModel>();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.ComponentModel.DataAnnotations;
 using static ClassicCars.EntityValidations;
 
@@ -19,7 +20,8 @@ namespace ClassicCars.ViewModels
         [MinLength(ReviewCommentMinLength, ErrorMessage = "{0} must be at least {1} characters.")]
         public string Comment { get; set; } = null!;
 
-        public string UserName { get; set; } = null!;
+        [ValidateNever]
+        public string? UserName { get; set; }
         public DateTime CreatedOn { get; set; }
     }
 }

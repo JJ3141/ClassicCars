@@ -20,54 +20,76 @@
             <div class="image-box" style="background-image:url('@imgSrc')"></div>
         </div>
 
-    <div class="reviews">
-        <strong>Reviews:</strong>
+        <div class="reviews">
+            <strong>Reviews:</strong>
 
-        @if (Model.Reviews != null && Model.Reviews.Any())
-        {
-            <ul class="review-list">
-                @foreach (var r in Model.Reviews)
-                {
-                    <li class="review-item">
-                        <div><strong>@r.UserName</strong> <span class="rating">@r.Rating/5</span></div>
-                        <div class="comment">@r.Comment</div>
-                        <div class="date">@r.CreatedOn.ToString("yyyy-MM-dd")</div>
-                        @if (UserManager.GetUserAsync(User).Result?.Id == UserManager.GetUserAsync(User).Result?.Id)
-                        {
-                            <!-- no-op: placeholder -->
-                        }
-                    </li>
-                }
-            </ul>
-        }
-        else
-        {
-            <p>No reviews yet.</p>
-        }
-
-        <div class="add-review">
-            @if (SignInManager.IsSignedIn(User))
+            @if (Model.Reviews != null && Model.Reviews.Any())
             {
-                <form asp-controller="CarReview" asp-action="Add" method="post">
-                    @Html.AntiForgeryToken()
-                    <input type="hidden" name="carId" value="@Model.Id" />
-                    <label>Rating</label>
-                    <select name="Rating">
-                        @for (int i = 1; i <= 5; i++)
-                        {
-                            <option value="@i">@i</option>
-                        }
-                    </select>
-                    <textarea name="Comment" placeholder="Write your review" required></textarea>
-                    <button type="submit">Add review</button>
-                </form>
+                <ul class="review-list">
+                    @foreach (var r in Model.Reviews.OrderByDescending(r => r.CreatedOn))
+                    {
+                        <li class="review-item">
+                    
+                            <div class="review-header">
+                                <span class="review-user">@r.UserName</span>
+                                <span class="review-rating">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= r.Rating)
+                                        {
+                                            <span class="star filled">★</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="star">☆</span>
+                                        }
+                                    }
+                                </span>
+                            </div>
+
+                            <div class="review-comment">
+                                @r.Comment
+                            </div>
+
+                            <div class="review-date">
+                                @r.CreatedOn.ToString("dd MMM yyyy")
+                            </div>
+
+                        </li>
+                    }
+                </ul>
             }
             else
             {
-                <p><a asp-controller="Account" asp-action="Login">Sign in</a> to add a review.</p>
+                <p class="no-reviews">No reviews yet.</p>
             }
+
+            <div class="add-review">
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <form asp-controller="CarReview" asp-action="Add" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="carId" value="@Model.Id" />
+
+                        <label>Rating</label>
+                        <select name="Rating">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+
+                        <textarea name="Comment" placeholder="Write your review..." required></textarea>
+
+                        <button type="submit">Add review</button>
+                    </form>
+                }
+                else
+                {
+                    <p><a asp-controller="Account" asp-action="Login">Sign in</a> to add a review.</p>
+                }
+            </div>
         </div>
-    </div>
 
         <div class="right">
             <div class="info-box">
@@ -218,6 +240,20 @@
         modal.querySelector("form").reset();
         modal.style.display = "none";
     }</script>
+@{
+    var hasServiceErrors = !ViewData.ModelState.IsValid && ViewData.ModelState.Keys.Any(k => k.StartsWith("Service"));
+}
+<script>
+    (function() {
+        var open = @((hasServiceErrors) ? "true" : "false");
+        if (open === "true") {
+            document.addEventListener('DOMContentLoaded', function() {
+                const modal = document.getElementById("addServiceModal");
+                if (modal) modal.style.display = 'flex';
+            });
+        }
+    })();
+</script>
     @section Scripts {
         <partial name="_ValidationScriptsPartial" />
     }
