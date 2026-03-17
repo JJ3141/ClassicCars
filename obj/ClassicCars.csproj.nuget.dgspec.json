@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbookpro/Desktop/test1/Untitled/ClassicCars/ClassicCars.csproj": {}
+    "/Users/macbookpro/Desktop/stava li/Untitled/ClassicCars.csproj": {}
   },
   "projects": {
-    "/Users/macbookpro/Desktop/test1/Untitled/ClassicCars/ClassicCars.csproj": {
+    "/Users/macbookpro/Desktop/stava li/Untitled/ClassicCars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbookpro/Desktop/test1/Untitled/ClassicCars/ClassicCars.csproj",
+        "projectUniqueName": "/Users/macbookpro/Desktop/stava li/Untitled/ClassicCars.csproj",
         "projectName": "ClassicCars",
-        "projectPath": "/Users/macbookpro/Desktop/test1/Untitled/ClassicCars/ClassicCars.csproj",
+        "projectPath": "/Users/macbookpro/Desktop/stava li/Untitled/ClassicCars.csproj",
         "packagesPath": "/Users/macbookpro/.nuget/packages/",
-        "outputPath": "/Users/macbookpro/Desktop/test1/Untitled/ClassicCars/obj/",
+        "outputPath": "/Users/macbookpro/Desktop/stava li/Untitled/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macbookpro/.nuget/NuGet/NuGet.Config"

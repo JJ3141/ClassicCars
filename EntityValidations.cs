@@ -58,7 +58,7 @@
         public const double MaxMileage = 2000000;
 
         public const int ReviewCommentMaxLength = 350;
-        public const int ReviewCommentMinLength = 5;
+        public const int ReviewCommentMinLength = 2;
     }
 }
 
