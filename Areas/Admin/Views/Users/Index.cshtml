@@ -1,0 +1,55 @@
+@model IEnumerable<ClassicCars.Areas.Admin.ViewModels.UserListItemViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2>Users</h2>
+@if (TempData["RoleMessage"] != null)
+{
+    <div class="alert alert-info">@TempData["RoleMessage"]</div>
+}
+<div class="mb-3">
+    <form method="post" asp-area="Admin" asp-controller="Users" asp-action="CreateRole" class="d-flex align-items-center">
+        @Html.AntiForgeryToken()
+        <input type="text" name="roleName" class="form-control w-auto me-2" placeholder="New role name" />
+        <button type="submit" class="btn btn-sm btn-success">Create Role</button>
+    </form>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Roles</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach(var user in Model)
+{
+    <tr>
+        <td>@user.UserName</td>
+        <td>@user.Email</td>
+        <td>@user.FirstName @user.LastName</td>
+        <td>@user.Roles</td>
+        <td>
+            <form method="post" asp-area="Admin" asp-controller="Users" asp-action="UpdateRole" class="d-inline">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="userId" value="@user.UserId" />
+                <select name="selectedRole" class="form-select form-select-sm d-inline w-auto">
+                    <option value="">-- No role --</option>
+                    @foreach (var role in user.AllRoles ?? new List<string>())
+                    {
+                        <option value="@role" @(role == user.SelectedRole ? "selected" : "")>@role</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-sm btn-primary ms-2">Update</button>
+            </form>
+            <a asp-area="Admin" asp-controller="Users" asp-action="EditRoles" asp-route-id="@user.UserId" class="btn btn-sm btn-secondary ms-2">Advanced</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

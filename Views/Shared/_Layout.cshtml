@@ -2,6 +2,17 @@
 <html lang="en">
 <body>
 
+    @if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Administrator"))
+    {
+        <div style="background:#f8f9fa;border-bottom:1px solid #e5e5e5;padding:8px 0;margin-bottom:12px;">
+            <div class="container">
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Dashboard</a>
+                &nbsp;|&nbsp;
+                <a asp-area="Admin" asp-controller="Users" asp-action="Index">Manage Users / Roles</a>
+            </div>
+        </div>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

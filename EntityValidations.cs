@@ -59,6 +59,19 @@
 
         public const int ReviewCommentMaxLength = 350;
         public const int ReviewCommentMinLength = 2;
+
+        public const int WarrantyProviderMaxLength = 200;
+        public const int WarrantyProviderMinLength = 1;
+
+        public const int WarrantyNotesMaxLength = 200;
+        public const int WarrantyNotesMinLength = 2;
+
+        public const int InsuranceProviderMaxLength = 100;
+        public const int InsuranceProviderMinLength = 2;
+
+
+        public const int InsuranceNotesMaxLength = 500;
+        public const int InsuranceNotesMinLength = 2;
     }
 }
 

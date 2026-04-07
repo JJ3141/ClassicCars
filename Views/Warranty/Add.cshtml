@@ -1,0 +1,48 @@
+﻿@model ClassicCars.WarrantyViewModel
+<link rel="stylesheet" href="~/warranty.css" />
+<div class="page">
+    <div class="form-card">
+        <h2>Add Warranty</h2>
+
+        <form asp-action="CreateWarranty" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="CarId" />
+            <div asp-validation-summary="ModelOnly" class="validation-summary text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Provider"></label>
+                <input asp-for="Provider" />
+                <span asp-validation-for="Provider" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CoverageAmount"></label>
+                <input asp-for="CoverageAmount" />
+                <span asp-validation-for="CoverageAmount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StartDate"></label>
+                <input asp-for="StartDate" type="date" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EndDate"></label>
+                <input asp-for="EndDate" type="date" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Notes"></label>
+                <textarea asp-for="Notes"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Warranty</button>
+        </form>
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

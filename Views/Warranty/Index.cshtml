@@ -1,0 +1,39 @@
+﻿@model ClassicCars.WarrantyViewModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<link rel="stylesheet" href="~/warranty.css" />
+
+@await Html.PartialAsync("_NavBar")
+
+<div class="page">
+    <h1 class="model">Warranty for @Model.Car.Brand @Model.Car.Model</h1>
+
+    <div class="warranty-card">
+        <h3>@Model.Provider</h3>
+
+        <div class="card-info">
+            <p><strong>Coverage Amount:</strong> @Model.CoverageAmount.ToString("C")</p>
+            <p><strong>Start Date:</strong> @Model.StartDate.ToShortDateString()</p>
+            <p><strong>End Date:</strong> @Model.EndDate.ToShortDateString()</p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.Notes))
+        {
+            <div class="desc">
+                <p><strong>Notes:</strong> @Model.Notes</p>
+            </div>
+        }
+    </div>
+
+    <a asp-controller="Cars" asp-action="Details" asp-route-id="@Model.Car.Id" class="back-btn">
+        ← Back to Car Details
+    </a>
+</div>
+
+@await Html.PartialAsync("_Footer")
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

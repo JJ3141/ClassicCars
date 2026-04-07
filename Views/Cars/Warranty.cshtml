@@ -1,0 +1,25 @@
+﻿@model ClassicCars.WarrantyViewModel
+
+<h2>Warranty Details</h2>
+
+<div class="warranty-details">
+    <p><strong>Car:</strong> @Model.Car.Brand @Model.Car.Model (@Model.Car.Year)</p>
+
+    @if (!Model.HasWarranty)
+    {
+        <p><em>No warranty records found for this car.</em></p>
+    }
+    else
+    {
+        <p><strong>Provider:</strong> @Model.Provider</p>
+        <p><strong>Coverage Amount:</strong> @Model.CoverageAmount</p>
+        <p><strong>Start Date:</strong> @Model.StartDate.ToString("dd MMM yyyy")</p>
+        <p><strong>End Date:</strong> @Model.EndDate.ToString("dd MMM yyyy")</p>
+        @if (!string.IsNullOrEmpty(Model.Notes))
+        {
+            <p><strong>Notes:</strong> @Model.Notes</p>
+        }
+    }
+</div>
+
+<a asp-controller="Cars" asp-action="Details" asp-route-id="@Model.Car.Id">Back to Car</a>

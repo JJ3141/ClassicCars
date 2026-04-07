@@ -2,6 +2,7 @@ using ClassicCars.Data;
 using ClassicCars.Models;
 using ClassicCars.Services;
 using ClassicCars.Services.Interfaces;
+using ClassicCars.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,12 @@ builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IServiceRecordService, ServiceRecordService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICarReviewService, CarReviewService>();
+builder.Services.AddScoped<IWarrantyRepository, WarrantyRepository>();
+builder.Services.AddScoped<WarrantyRepository>();
+builder.Services.AddScoped<IWarrantyService, WarrantyService>();
+builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<IServiceRecordRepository, ServiceRecordRepository>();
+builder.Services.AddScoped<ICarReviewRepository, CarReviewRepository>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -41,9 +48,34 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseExceptionHandler("/Error/500");
+app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "warranty_create",
+    pattern: "Cars/Warranty/{carId}",
+    defaults: new { controller = "Warranty", action = "Create" }
+);
+
+app.MapControllerRoute(
+    name: "warranty_delete",
+    pattern: "Cars/Warranty/Delete/{carId}",
+    defaults: new { controller = "Warranty", action = "Delete" }
+);
+
+app.MapControllerRoute(
+    name: "create_warranty_legacy",
+    pattern: "Cars/CreateWarranty",
+    defaults: new { controller = "Warranty", action = "Create" }
+);
 
 app.Run();
 
@@ -52,6 +84,7 @@ static async Task SeedDataAsync(WebApplication app)
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
     try
     {
@@ -83,6 +116,25 @@ static async Task SeedDataAsync(WebApplication app)
                 EmailConfirmed = true
             };
             await userManager.CreateAsync(user2, "Password123!");
+        }
+
+        var roles = new[] { "User", "Administrator" };
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                await roleManager.CreateAsync(new IdentityRole(role));
+            }
+        }
+
+        if (!string.IsNullOrEmpty(user1?.Id) && !await userManager.IsInRoleAsync(user1, "User"))
+        {
+            await userManager.AddToRoleAsync(user1, "User");
+        }
+
+        if (!string.IsNullOrEmpty(user2?.Id) && !await userManager.IsInRoleAsync(user2, "Administrator"))
+        {
+            await userManager.AddToRoleAsync(user2, "Administrator");
         }
 
         if (!db.Cars.Any())

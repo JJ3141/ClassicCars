@@ -64,5 +64,12 @@ namespace ClassicCars.Controllers
             await _accountService.LogoutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public IActionResult AccessDenied(string returnUrl)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
+        }
     }
 }

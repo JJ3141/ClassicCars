@@ -10,7 +10,7 @@ namespace ClassicCars.Services.Interfaces
         Task<CarDetailsViewModel?> GetDetailsAsync(int id);
         Task<bool> DeleteAsync(int id, string userId);
 
-
+    
 
     }
 }

@@ -1,0 +1,56 @@
+@model ClassicCars.WarrantyViewModel
+
+@{
+    ViewData["Title"] = "Add Warranty";
+}
+
+<div class="card box-shadow mt-4">
+    <div class="card-body">
+        <h3 class="card-title mb-3">@ViewData["Title"]</h3>
+
+        <form asp-action="Create" method="post">
+            <input type="hidden" asp-for="CarId" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Provider" class="form-label"></label>
+                    <input asp-for="Provider" class="form-control" />
+                    <span asp-validation-for="Provider" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="CoverageAmount" class="form-label"></label>
+                    <input asp-for="CoverageAmount" class="form-control" />
+                    <span asp-validation-for="CoverageAmount" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="StartDate" class="form-label"></label>
+                    <input asp-for="StartDate" class="form-control" type="date" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="EndDate" class="form-label"></label>
+                    <input asp-for="EndDate" class="form-control" type="date" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <label asp-for="Notes" class="form-label"></label>
+                    <textarea asp-for="Notes" rows="4" class="form-control"></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-controller="Cars" asp-action="Details" asp-route-id="@Model.CarId" class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+
+            @Html.AntiForgeryToken()
+        </form>
+    </div>
+</div>

@@ -13,6 +13,7 @@ namespace ClassicCars.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<ServiceRecord> ServiceRecords { get; set; }
         public DbSet<CarReview> CarReviews { get; set; }
+        public DbSet<Warranty> Warranties { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

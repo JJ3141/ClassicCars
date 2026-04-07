@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DefaultItemExcludes>$(DefaultItemExcludes);ClassicCars.Tests\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
@@ -36,6 +37,9 @@
     <None Remove="Views\Account\" />
     <None Remove="Services\" />
     <None Remove="Services\Interfaces\" />
+    <None Remove="Views\Warranty\" />
+    <None Remove="Repositories\" />
+    <None Remove="Dtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
@@ -45,7 +49,6 @@
     <Folder Include="Views\Profile\" />
     <Folder Include="Views\Collection\" />
     <Folder Include="wwwroot\gallery\seed\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\cars.css" />

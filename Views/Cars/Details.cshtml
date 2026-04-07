@@ -98,7 +98,15 @@
                 <p><strong>Year:</strong> @Model.Year</p>
                 <p><strong>Price:</strong> @Model.Price лв.</p>
             </div>
-
+            <a class="btn warranty-btn" asp-controller="Cars" asp-action="Warranty" asp-route-id="@Model.Id">
+                View Warranty
+            </a>
+            @if (isOwner)
+            {
+                <a class="btn warranty-btn" asp-controller="Cars" asp-action="CreateWarranty" asp-route-carId="@Model.Id">
+                    Add Warranty
+                </a>
+            }
             <div class="tech-title">Technical data</div>
             <div class="tech-box">
                 <div class="field">Engine type: @Model.EngineType</div>
